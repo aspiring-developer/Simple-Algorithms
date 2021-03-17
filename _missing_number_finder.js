@@ -21,7 +21,7 @@ function missingNumberFinder(num) {
   //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  // Find sum of given numbers
+  // Find sum of consecutive numbers
   function sumOfConsecutiveFinder(min, max) {
     let sumOfConsecutive = 0;
     for (let i = min; i <= max; i++) {

@@ -1,7 +1,7 @@
-//TODO: Find min and Min number in an array
+//TODO: Find Max and Min number in an array
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//* Find max Number
+//* Find Max Number
 function maxFinder(num) {
   let maxNum = -1000000;
 

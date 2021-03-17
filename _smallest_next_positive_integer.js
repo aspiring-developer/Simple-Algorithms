@@ -1,4 +1,4 @@
-//TODO: Find smallest positive integer that does not occur in the array
+//TODO: Find next smallest positive integer that does not occur in the array
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //* Solving with built-in method
 function solution(num) {
@@ -11,8 +11,7 @@ console.log(solution(givenNum1) + " <--Result from built in method")
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//* Find next positive integer
-
+//* Find next positive integer w/o built-in method
 function findNumber(values) {
   let result = [];
 
@@ -21,7 +20,6 @@ function findNumber(values) {
       result[values[i]] = true;
     }
   }
-
   for (let i = 1; i <= result.length; i++) {
     if (result[i] === undefined) {
       return i;

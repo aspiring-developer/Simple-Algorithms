@@ -1,4 +1,4 @@
-//TODO: Compare two array element and find similar numbers
+//TODO: Compare two array elements and find non-matching numbers
 
 function compareArrays(arr1, arr2) {
   let nonMatching = [];

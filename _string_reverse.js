@@ -1,4 +1,4 @@
-//TODO: Reverse given string
+//TODO: Reverse given string's characters
 
 function reverseString(str) {
   let reveredStr = '';
