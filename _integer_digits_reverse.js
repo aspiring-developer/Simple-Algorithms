@@ -16,16 +16,18 @@
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //* without built-in method
 function reverseIntDigits(theInt) {
-  let convertedInt = [];
-  console.log(theInt + " <--Original Int");
-  let theIntConvertedToArr = theInt.toString();
-  for (let i = 0; i < theIntConvertedToArr.length; i++) {
-    convertedInt.push(theIntConvertedToArr[i]);
-  }
-  let reversedInt = parseInt(convertedInt.reverse().join(''));
-  return reversedInt;
+  //let convertedInt = [];
+  //console.log(theInt + " <--Original Int");
+  //let theIntConvertedToArr = theInt.toString();
+  //for (let i = 0; i < theIntConvertedToArr.length; i++) {
+  //  convertedInt.push(theIntConvertedToArr[i]);
+  //}
+  //let reversedInt = parseInt(convertedInt.reverse().join(''));
+  //return reversedInt;
 }
 let givenInt = 389;
 console.log(reverseIntDigits(givenInt) + " <--Reversed Result");
+
+
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
