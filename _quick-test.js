@@ -1,4 +1,4 @@
-//IIFE
+//IIFE (Immediately Invoked Function Expression)
 var firstName = 'Harry';
 (function(name) {
 var greeting = "Hello";

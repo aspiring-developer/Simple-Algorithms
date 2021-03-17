@@ -16,11 +16,11 @@ console.log(recursiveFunction(givenNum) + " <--Final Result");
 function recursiveFunction1(num1) {
   let result1 = 0;
   if (num1 > 0) {
-      result1 += num1 + recursiveFunction(num1 - 1);
-      return result1;
-    } else {
-      return 0;
-    }
+    result1 += num1 + recursiveFunction(num1 - 1);
+    return result1;
+  } else {
+    return 0;
+  }
 }
 let givenNum1 = 5;
 recursiveFunction1(givenNum1);
