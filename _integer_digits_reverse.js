@@ -14,6 +14,24 @@
 //console.log(reverseIntDigits(givenInt) + " <--Reversed Result");
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//* THIS IS THE BEST METHOD
+function reverseInteger(num) {
+  let reversedNum = 0;
+  let remainder = 0;
+
+  while (num != 0) {
+    remainder = num % 10;
+    reversedNum = reversedNum * 10 + remainder;
+    //console.log(num + " <-- before math");
+    num = Math.floor(num / 10);
+    //console.log(num + " <-- after math");
+  }
+  return reversedNum;
+}
+console.log(reverseInteger(9124));
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //! NOT THE BEST WAY, BUT IT IS ANOTHER WAY --- ONLY for Study Purpose
 function reverseInt(receivingNum) {
   let reversed = receivingNum.toString().split("").reverse().join("");
