@@ -14,40 +14,16 @@
 //console.log(reverseIntDigits(givenInt) + " <--Reversed Result");
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//* without built-in method
-function reverseIntDigits1(theInt1) {
-  let reversedInt1 = 0;
-  let foundDigit;
-  while (theInt1 > 0){
-    foundDigit = theInt1 % 10;
-    reversedInt1 += foundDigit;
-//console.log(reversedInt1 + " <--First found Digit")
-    theInt1 = (theInt1 - foundDigit) /10;
-    //console.log(theInt1 + " <-- Here 13")
-
-    let secondFoundDigit = theInt1 % 10;
-    //console.log(secondFoundDigit + " <-- 2nd found digit");
-
-foundDigit = (foundDigit *10) + secondFoundDigit;
-//console.log(foundDigit + " <-- found digit after 2nd");
-
-let thirdFoundDigit = theInt1;
-//console.log(theInt1);
-let thirdDigitModulus = (thirdFoundDigit %10);
-//console.log(thirdDigitModulus + " <-- third digit");
-let actualThirdDigit = (theInt1 - thirdDigitModulus) /10;
-//console.log(actualThirdDigit + " <-- Actual 3rd digit")
-  foundDigit = (foundDigit * 10) + actualThirdDigit;
-  //console.log(foundDigit + " <-- Finally");
-  return foundDigit;
+//! NOT THE BEST WAY, BUT IT IS ANOTHER WAY --- ONLY for Study Purpose
+function reverseInt(receivingNum) {
+  let reversed = receivingNum.toString().split("").reverse().join("");
+  return parseInt(reversed) * Math.sign(receivingNum);
+  //* This code below works without *Math.sign(receivingNum), but doesn't if needed an operator sign i.e. (-)
+  //* return parseInt(reversed);
   }
-  return 0;
-
-}
-let givenInt1 = 258;
-console.log(` ${reverseIntDigits1(givenInt1)} <--Result no built-in. Given--> ${givenInt1 }`);
-
-
+  console.log("------------------------------------------ ");
+  console.log(reverseInt(10594) + " --> From another Function");
+  console.log("------------------------------------------ ");
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -72,7 +48,4 @@ console.log(` ${reverseIntDigits1(givenInt1)} <--Result no built-in. Given--> ${
 //}
 //let givenInt1 = 258;
 //console.log(` ${reverseIntDigits1(givenInt1)} <--Result no built-in. Given--> ${givenInt1}`);
-
-
-
 ////<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
