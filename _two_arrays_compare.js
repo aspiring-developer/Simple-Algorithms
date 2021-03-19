@@ -16,10 +16,11 @@ function compareArrays(arr1, arr2) {
   //console.table(matching)
   return nonMatching;
 }
-let givenArr1 = [1, 3, 4, 7, 8, 6, 9, 5, 12, 14];
-let givenArr2 = [2, 3, 10, 7, 11, 9, 6, 18, 17, 20];
+let givenArr1 = [1, 3, 4, 7, 8, 6, 9, 5];
+let givenArr2 = [2, 3, 10, 7, 11, 9, 6];
 
-console.table(compareArrays(givenArr1, givenArr2));
+console.log(compareArrays(givenArr1, givenArr2) + " <--Final result sort&indexOf");
+console.log("--------------------------------------------")
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //* Comparison using nested for loops (works only comparing with ===, not !==)
@@ -27,9 +28,11 @@ function compareArrays1(arr1, arr2) {
 let foundElements = [];
 
 for (let i = 0; i < arr1.length; i++) {
+  console.log(arr1[i] + " <-- arr1[i]");
   for (let j = 0; j < arr2.length; j++) {
+    console.log(" " + " " + arr2[j] + " ----- <-- arr2[j]");
     if(arr1[i] === arr2[j])
-    foundElements.push(arr1[i]);
+    foundElements.push(arr2[j]);
   }
 }
 return foundElements;
@@ -37,7 +40,6 @@ return foundElements;
 let givenArr_1 = [1, 3, 4, 7, 8, 6];
 let givenArr_2 = [2, 3, 10, 7, 11, 6];
 console.log(compareArrays1(givenArr_1, givenArr_2) + " <--Final result");
-console.table(compareArrays1(givenArr_1, givenArr_2));
-
+//console.table(compareArrays1(givenArr_1, givenArr_2));
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
