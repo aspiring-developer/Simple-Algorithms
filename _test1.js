@@ -1,12 +1,13 @@
-var arr = [[1, 2], [3, 4], [5, 6]];
-for (var i = 0; i < arr.length; i++) {
-  //console.log(arr.length)//3
-  //console.log(arr[i]); //[1, 2], [3, 4], [5, 6]
-  //console.log(arr[i].length) //2,2,2
-  for (var j = 0; j < arr[i].length; j++) {
-    //console.log(arr[i]); //[ 1, 2 ], [ 1, 2 ], [ 3, 4 ], [ 3, 4 ], [ 5, 6 ], [ 5, 6 ]
-    console.log(arr[j]) // [1, 2], [3, 4],[1, 2], [3, 4],[1, 2], [3, 4]
-       let result = (arr[i][j]);
-    console.log(result + " Result (Multiplied)"); // 123456
+function findNextPosNum(num) {
+  let nextPosNum = 0;
+  for (let i = 0; i < num.length; i++) {
+
   }
+  console.log(nextPosNum)
+  return nextPosNum;
 }
+
+let givenNum = [1,2,4];  // should return 3
+// let givenNum = [1,2,3];  // should return 4
+console.log(findNextPosNum(givenNum) + " <--Final Result");
+
