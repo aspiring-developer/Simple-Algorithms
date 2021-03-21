@@ -1,23 +1,28 @@
-function findNextPosNum(num) {
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//* Find next positive integer w/o built-in method
+function findNumber(num) {
   let result = [];
-  for (let i = 0; i < num.length; i++) {
-//console.log(num[i] + " <-- current num");
-let nextNum = num[i]+1;
-//console.log(nextNum + " NextNum")
-if(!num.includes(nextNum)) {
-  result.push(nextNum);
-  console.log(nextNum + " nextNumFinal");
- }
- console.log(num.length+2)
- if(result.includes(nextNum) && result.includes(num.length+2)) {
-   result.pop();
+
+  //for (let i = 0; i < num.length; i++) {
+  //  if (num[i] >= 0) {
+  //    //result[num[i]] = true;
+  //    result.push(num[i]);
+  //  }
+  //}
+  for (let i = 0; i <= num.length; i++) {
+    console.log(num[i] + " num[i] in for loop")
+    console.log(num[i]+1 + " num[i]+1 in for loop")
+    console.log(num[i+1] + " num[i+1] in for loop")
+    if (num[i]+1 === undefined) {
+      return i;
+    }
   }
+  return "tt";
 }
-  //console.log(result);
-  return result;
 
-}
-//let givenNum = [1,2,3,4,5,6,7];  // should return 3
- let givenNum = [1,2,3,5,6];  // should return 4
-console.log(findNextPosNum(givenNum) + " <--Final Result");
+let givenNum2 = [1, 2, 3,4, 5];
+console.log(findNumber(givenNum2) + " <--Result without built in method");
 
+console.log("-------------------------------------------");
+
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

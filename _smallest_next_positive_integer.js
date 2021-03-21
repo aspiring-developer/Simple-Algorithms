@@ -3,10 +3,12 @@
 //* Solving with built-in method
 function solution(num) {
   for (i = 1; i < 1000000; i++) {
-    if (!num.includes(i)) return i;
+    if (!num.includes(i)) {
+      return i;
+    }
   }
 }
-let givenNum1 = [6, 3, 2, 4];
+let givenNum1 = [-1, 0, 1, 3, 2, 4];
 console.log(solution(givenNum1) + " <--Result from built in method")
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 console.log("-------------------------------------------");
@@ -39,18 +41,18 @@ console.log("-------------------------------------------");
 function findNextPosNum(num) {
   let result = [];
   for (let i = 0; i < num.length; i++) {
-let nextNum = num[i]+1;
-if(!num.includes(nextNum)) {
-  result.push(nextNum);
- }
- if(result.includes(nextNum) && result.includes(num.length+2)) {
-   result.pop();
+    let nextNum = num[i] + 1;
+    if (!num.includes(nextNum)) {
+      result.push(nextNum);
+    }
+    if (result.includes(nextNum) && result.includes(num.length + 2)) {
+      result.pop();
+    }
   }
-}
   return result;
 }
 
-let givenNum = [1,2,4,5];  // should return 3
- //let givenNum = [1,2,3,4,5,6];  // should return 7
+let givenNum = [1, 2, 4, 5];  // should return 3
+//let givenNum = [1,2,3,4,5,6];  // should return 7
 console.log(findNextPosNum(givenNum) + " <--Result local way");
 console.log("-------------------------------------------");
