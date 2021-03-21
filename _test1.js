@@ -1,28 +1,28 @@
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//* Find next positive integer w/o built-in method
-function findNumber(num) {
-  let result = [];
 
-  //for (let i = 0; i < num.length; i++) {
-  //  if (num[i] >= 0) {
-  //    //result[num[i]] = true;
-  //    result.push(num[i]);
-  //  }
-  //}
-  for (let i = 0; i <= num.length; i++) {
-    console.log(num[i] + " num[i] in for loop")
-    console.log(num[i]+1 + " num[i]+1 in for loop")
-    console.log(num[i+1] + " num[i+1] in for loop")
-    if (num[i]+1 === undefined) {
-      return i;
-    }
-  }
-  return "tt";
+
+
+
+//const arrayOne = [1, 4, 5, 7, 3, 8, 1, 9];
+//const arrayTwo = [3, 7, 1, 12, 9, 5, 24, 16];
+
+//function diffArrayInt(array1, array2) {
+//  // 1. Return a new array that will follow this rules
+//  return (
+//    // 2. Combine two arrays
+//    [...array1, ...array2]
+//    // 3. Check each element if it's unique return in a new array
+//    .filter((item) => !array1.includes(item) || !array2.includes(item))
+//  );
+//}
+
+//console.log(diffArrayInt(arrayOne, arrayTwo));
+
+
+const arrayOne = [1, 4, 5, 7, 3, 8, 1, 9];
+const arrayTwo = [3, 7, 1, 12, 9, 5, 24, 16];
+function diffArrayInt(array1, array2) {
+  let newArr = [...array1, ...array2];
+    let result = newArr.filter((item) => !array1.includes(item) || !array2.includes(item));
+    return result;
 }
-
-let givenNum2 = [1, 2, 3,4, 5];
-console.log(findNumber(givenNum2) + " <--Result without built in method");
-
-console.log("-------------------------------------------");
-
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+console.log(diffArrayInt(arrayOne, arrayTwo));
