@@ -21,12 +21,8 @@ function reverseInteger(num) {
 
   while (num != 0) {
     remainder = num % 10;
-    //console.log(remainder + " <-- Remainder") // 4, 2, 1
     reversedNum = reversedNum * 10 + remainder;
-   // console.log(reversedNum + " <-- Reversed Num" )// 4, 42, 421
-    //console.log(num + " <-- before math"); // 124, 12, 1
   num = Math.floor(num / 10);
-   //console.log(num + " <-- after math");// 12, 1, 0
   }
   return reversedNum;
 }

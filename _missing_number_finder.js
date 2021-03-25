@@ -6,17 +6,13 @@ function findMissing(num) {
   console.log(sortedNum + " <--SortedNum")
   let missingNum = '';
   for (let i = 0; i < sortedNum.length - 1; i++) {
-    //if (sortedNum[i] + 1 !== sortedNum[i + 1]) {
     if (sortedNum[i + 1] !== sortedNum[i] + 1) {
-      console.log(sortedNum[i] + " <--sortedNum[i]");
-      console.log(sortedNum[i] + 1 + " <--sortedNum[i] + 1");
-      console.log(sortedNum[i + 1] + " <--sortedNum[i + 1]");
       missingNum = sortedNum[i] + 1;
     }
   }
   return missingNum;
 }
-const givenArray = [1, 4, 2, 6, 3]; // 1,2,4,5,6 = 3
+const givenArray = [1, 4, 2, 6, 3]; // 1,2,3,4,6 = 5
 console.log(findMissing(givenArray));
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -40,9 +36,9 @@ function missingNumberFinder(num) {
   }
   console.log(`${sumOfGivenFinder(givenNum)} <--Sum of given`);
   sumOfGivenFinder(givenNum);
-   //*-------------------------------------------
+  //*-------------------------------------------
 
-    //*-------------------------------------------
+  //*-------------------------------------------
   // Find sum of consecutive numbers
   function sumOfConsecutiveFinder(min, max) {
     let sumOfConsecutive = 0;
@@ -59,7 +55,7 @@ function missingNumberFinder(num) {
   // Find the missing number
   missingNum = sumOfConsecutiveFinder(minNum, maxNum) - sumOfGivenFinder(givenNum);
   console.log(`${missingNum} <--Missing number`);
-    //*-------------------------------------------
+  //*-------------------------------------------
 
   return missingNum;
 }
