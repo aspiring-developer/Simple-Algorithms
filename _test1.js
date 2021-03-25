@@ -18,11 +18,57 @@
 //console.log(diffArrayInt(arrayOne, arrayTwo));
 
 
-const arrayOne = [1, 4, 5, 7, 3, 8, 1, 9];
-const arrayTwo = [3, 7, 1, 12, 9, 5, 24, 16];
-function diffArrayInt(array1, array2) {
-  let newArr = [...array1, ...array2];
-    let result = newArr.filter((item) => !array1.includes(item) || !array2.includes(item));
-    return result;
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//* Non matching numbers in two arrays
+//const arrayOne = [1, 4, 5, 7, 3, 8, 1, 9];
+//const arrayTwo = [3, 7, 1, 12, 9, 5, 24, 16];
+//function diffArrayInt(array1, array2) {
+//  let newArr = [...array1, ...array2];
+//    let result = newArr.filter((item) => !array1.includes(item) || !array2.includes(item));
+//    return result;
+//}
+//console.log(diffArrayInt(arrayOne, arrayTwo));
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//* Find missing number in a consecutive numbers array
+function findMissing(num) {
+  let sortedNum = num.sort(function (a, b) { return a - b });
+  console.log(sortedNum + " <--SortedNum")
+  let missingNum = '';
+  for (let i = 0; i < sortedNum.length - 1; i++) {
+    //if (sortedNum[i] + 1 !== sortedNum[i + 1]) {
+    if (sortedNum[i + 1] !== sortedNum[i] + 1) {
+      console.log(sortedNum[i] + " <--sortedNum[i]");
+      console.log(sortedNum[i] + 1 + " <--sortedNum[i] + 1");
+      console.log(sortedNum[i + 1] + " <--sortedNum[i + 1]");
+      missingNum = sortedNum[i] + 1;
+    }
+  }
+  return missingNum;
 }
-console.log(diffArrayInt(arrayOne, arrayTwo));
+const givenArray = [1, 4, 2, 6, 3]; // 1,2,4,5,6 = 3
+console.log(findMissing(givenArray));
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//* Find missing number in a consecutive numbers array
+function findMissing(num) {
+  let sortedNum = num.sort(function (a, b) { return a - b });
+  console.log(sortedNum + " <--SortedNum")
+  let missingNum = '';
+  for (let i = 0; i < sortedNum.length - 1; i++) {
+    //if (sortedNum[i] + 1 !== sortedNum[i + 1]) {
+    if (sortedNum[i + 1] !== sortedNum[i] + 1) {
+      console.log(sortedNum[i] + " <--sortedNum[i]");
+      console.log(sortedNum[i] + 1 + " <--sortedNum[i] + 1");
+      console.log(sortedNum[i + 1] + " <--sortedNum[i + 1]");
+      missingNum = sortedNum[i] + 1;
+    }
+  }
+  return missingNum;
+}
+const givenArray = [1, 4, 2, 6, 3]; // 1,2,4,5,6 = 3
+console.log(findMissing(givenArray));
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
