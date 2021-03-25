@@ -3,8 +3,8 @@
 function compareArrays(arr1, arr2) {
   let nonMatching = [];
   //let matching = [];
-  arr1.sort(function (a, b) { a - b });
-  arr2.sort(function (a, b) { a - b });
+  arr1.sort(function (a, b) { return a - b });
+  arr2.sort(function (a, b) { return a - b });
   for (let i = 0; i < arr1.length; i++) {
     if (arr2.indexOf(arr1[i]) === -1 && arr1.indexOf(arr2[i]) === -1) {
       nonMatching.push(arr1[i]);
@@ -61,7 +61,7 @@ console.log(findValues(given4, given3) + " <--Result");
 
 console.log("-------------------------------------------");
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
+//* Using filter method
 const arrayOne = [1, 4, 5, 7, 3, 8, 1, 9];
 const arrayTwo = [3, 7, 1, 12, 9, 5, 24, 16];
 function diffArrayInt(array1, array2) {
@@ -70,4 +70,5 @@ function diffArrayInt(array1, array2) {
     return result;
 }
 console.log(diffArrayInt(arrayOne, arrayTwo));
+
 
