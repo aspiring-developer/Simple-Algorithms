@@ -1,15 +1,13 @@
+
+
+
+/* ###########################################################
+//* Recursive Function
+console.log(recursive(10))
+
 //* Fibonacci Sequence
+console.log(fibonacci([0, 1, 2, 3, 4, 5, 6]))
 
 //* Repeated integer finder
-
-
-//* Recursive Function
-function recursive(num) {
-  let sum = 1;
-  while (num > 0) {
-    sum = num + recursive(num - 1);
-    return sum;
-  }
-  return 0;
-}
-console.log(recursive(10));
+console.log(repeated([0, 1, 2, 2, 4, 5, 6]))
+########################################################### */
