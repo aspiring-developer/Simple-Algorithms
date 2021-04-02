@@ -46,7 +46,7 @@ function findMissing(num) {
   }
   return missingNum;
 }
-const givenArray = [1, 4, 2, 6, 3]; // 1,2,4,5,6 = 3
+const givenArray = [1, 4, 2, 6, 5]; // 1,2,4,5,6 = 3
 console.log(findMissing(givenArray));
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 console.log("..........................................");
