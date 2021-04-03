@@ -39,14 +39,16 @@ console.log(repeated([0, 1, 4, 2, 5, 5, 6]) + " <--Repeated result");
 // ###########################################################
 //* Missing/next number finder
 function findMissing(num) {
-  let sorted = num.sort(function(a,b){return a-b});
+  let sorted = num.sort(function (a, b) { return a - b });
+  //let i = 0;
   for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] < 0) { sorted[i] = 0 };
     if (sorted[i + 1] !== sorted[i] + 1) {
       return sorted[i] + 1;
     }
   }
 }
-const givenArray = [1, 2, 4, 3, 5,6]; // 1,2,4,5,6 = 3
+const givenArray = [-100000, 2, 4, 3, 1, 5, 6]; // 1,2,4,5,6 = 3
 console.log(findMissing(givenArray) + " <--Missing Num result");
 
 
