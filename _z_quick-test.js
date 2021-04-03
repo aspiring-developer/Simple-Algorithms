@@ -7,7 +7,7 @@ function recursive(num) {
   }
   return 0;
 }
-console.log(recursive(5))
+console.log(recursive(5) + " <--Recursive result");
 // ###########################################################
 
 //* Fibonacci Sequence
@@ -16,9 +16,9 @@ function fibonacci(num) {
   for (let i = 2; i < num.length; i++) {
     fib[i] = fib[i - 2] + fib[i - 1];
   }
-  return fib;
+  return fib
 }
-console.log(fibonacci([0, 1, 2, 3, 4, 5, 6]))
+console.log(fibonacci([0, 1, 2, 3, 4, 5, 6]) + " <--Fibonacci result");
 // ###########################################################
 
 // ###########################################################
@@ -33,37 +33,36 @@ function repeated(num) {
     }
   }
 }
-console.log(repeated([0, 1, 4, 2, 2, 5, 6]))
+console.log(repeated([0, 1, 4, 2, 5, 5, 6]) + " <--Repeated result");
 // ###########################################################
 
 // ###########################################################
-//* Missing number finder
+//* Missing/next number finder
 function findMissing(num) {
-  let sortedNum = num.sort(function (a, b) { return a - b });
-  console.log(sortedNum)
-  for (let i = 0; i < sortedNum.length; i++) {
-    if (sortedNum[i + 1] != sortedNum[i] + 1) {
-      return `${sortedNum[i] + 1} <--Missing Number`;
+  let sorted = num.sort(function(a,b){return a-b});
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i + 1] !== sorted[i] + 1) {
+      return sorted[i] + 1;
     }
   }
 }
-const givenArray = [1, 2, 4, 3,5, 6]; // 1,2,4,5,6 = 3
-console.log(findMissing(givenArray));
+const givenArray = [1, 2, 4, 3, 5,6]; // 1,2,4,5,6 = 3
+console.log(findMissing(givenArray) + " <--Missing Num result");
 
 
 
 
 /* ###########################################################
 //* Recursive Function
-console.log(recursive(10))
+console.log(recursive(10) + " <--Recursive result");
 
 //* Fibonacci Sequence
-console.log(fibonacci([0, 1, 2, 3, 4, 5, 6]))
+console.log(fibonacci([0, 1, 2, 3, 4, 5, 6]) + " <--Fibonacci result");
 
 //* Repeated integer finder
-console.log(repeated([0, 1, 2, 2, 4, 5, 6]))
+console.log(repeated([0, 1, 2, 2, 4, 5, 6]) + " <--Repeated result");
 
 //* Find missing number in a consecutive numbers array
 const givenArray = [1, 4, 2, 6, 5]; // 1,2,4,5,6 = 3
-console.log(findMissing(givenArray));
+console.log(findMissing(givenArray) + " <--Missing Num result");
 ########################################################### */
