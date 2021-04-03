@@ -48,7 +48,7 @@ function findMissing(num) {
     }
   }
 }
-const givenArray = [-100000, 2, 4, 3, 1, 5, 6]; // 1,2,4,5,6 = 3
+const givenArray = [-100000, 1, 2, 4, 5, 6]; // 1,2,4,5,6 = 3
 console.log(findMissing(givenArray) + " <--Missing Num result");
 
 
