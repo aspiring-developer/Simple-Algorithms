@@ -1,6 +1,6 @@
 //* Recursive Function
 function recursive(num) {
-  let sum = 0;
+  let sum;
   while (num > 0) {
     sum = num + recursive(num - 1);
     return sum;
@@ -16,7 +16,7 @@ function fibonacci(num) {
   for (let i = 2; i < num.length; i++) {
     fib[i] = fib[i - 2] + fib[i - 1];
   }
-  return fib
+  return fib;
 }
 console.log(fibonacci([0, 1, 2, 3, 4, 5, 6]) + " <--Fibonacci result");
 // ###########################################################
@@ -33,22 +33,25 @@ function repeated(num) {
     }
   }
 }
-console.log(repeated([0, 1, 4, 2, 5, 5, 6]) + " <--Repeated result");
+console.log(repeated([0, 1, 4, 2, 2, 5, 6]) + " <--Repeated result");
 // ###########################################################
 
 // ###########################################################
 //* Missing/next number finder
 function findMissing(num) {
-  let sorted = num.sort(function (a, b) { return a - b });
-  //let i = 0;
-  for (let i = 0; i < sorted.length; i++) {
-    if (sorted[i] < 0) { sorted[i] = 0 };
-    if (sorted[i + 1] !== sorted[i] + 1) {
-      return sorted[i] + 1;
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] < 0) { num[i] = 0 };
+    console.log(num[i] + " <--num[i]");               // 0  1  2  3  4  5  6
+    console.log(num[i + 1] + " <--num[i + 1]");       // 1  2  3  4  5  6  UD
+    console.log(num[i] + 1 + " <--num[i]+1");         // 1  2  3  4  5  6  7
+    if (num[i] + 1 != num[i + 1]) {
+      console.log(num[i] + 1 + " <--num[i]+1 in if"); // 7
+      console.log(num[i + 1] + " <--num[i+1] in if"); // UD
+      return num[i] + 1;
     }
   }
 }
-const givenArray = [-100000, 1, 2, 4, 5, 6]; // 1,2,4,5,6 = 3
+const givenArray = [0, 1, 2, 3, 4, 5, 6]; // 1,2,3,4,5,6 = 7
 console.log(findMissing(givenArray) + " <--Missing Num result");
 
 
