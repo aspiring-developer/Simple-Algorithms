@@ -118,17 +118,25 @@
 
 
   function init() {
-  var count = 0; // name is a local variable created by init
-  function displayName() { // displayName() is the inner function, a closure
-   count++;
-    console.log(count); // use variable declared in the parent function
+    var name = 0; // name is a local variable created by init
+    function displayName() { // displayName() is the inner function, a closure
+      console.log(name); // use variable declared in the parent function
+    }
+    displayName();
   }
-  displayName();
+  init();
+  //*************************************
+
+  function makeFunc() {
+  var name = 'Mozilla';
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
 }
-init();
-init();
-init();
-init();
+//makeFunc();
+var myFunc = makeFunc();
+myFunc();
 </script>
 
 </html>
