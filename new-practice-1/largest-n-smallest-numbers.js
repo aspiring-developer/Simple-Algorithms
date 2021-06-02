@@ -11,6 +11,7 @@ function largestNumberFinder(num) {
 }
 const givenNum = [22, 3, 989, 65, 777, 1, 9098, 9999];
 console.log(largestNumberFinder(givenNum));
+
 //****************************************** */
 // SMALLEST NUM
 function smallestNumberFinder(num) {

@@ -20,7 +20,6 @@ function palindromeCheck1(str1) {
   }
 }
 console.log(palindromeCheck1("eye"));
-
 //*********************************** */
 // Checking/Filtering with REGEX
 function palindromeCheck2(str2) {

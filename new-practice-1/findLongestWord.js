@@ -10,4 +10,6 @@ function findLongestWord(str) {
   return { Longest_word: longest, longest_length: longest.length };
 }
 console.log(findLongestWord("Find longest word from this sentence"));
+
+
 //findLongestWord("Find longest word from this sentence");

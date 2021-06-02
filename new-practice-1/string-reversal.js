@@ -6,7 +6,6 @@ function reversalFunction(str) {
 }
 reversalFunction("Hello");
 
-
 //************************************* */
 function reversalFunction1(str1) {
   const reversed1 = str1.split("").reverse().join("");

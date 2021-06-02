@@ -6,7 +6,6 @@ function factorial1(num) {
     factorialSum *= num[i];
   }
   return factorialSum;
-
 }
 let num = [1, 2, 3, 4, 5];
 console.log(factorial1(num));
@@ -18,7 +17,6 @@ function factorial2(num2) {
     factorialSum2 *= i;
   }
   return factorialSum2;
-
 }
 let num2 = 5;
 console.log(factorial2(num2));
