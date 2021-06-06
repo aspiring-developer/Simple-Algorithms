@@ -25,6 +25,14 @@ if(a<0 || b<0) {
 console.log(abTest(0,2));
 
 //* ######################################## */
+function testing(num) {
+  let sum = 0;
+  if(num>0) {
+    sum = num + testing(num-1);
+  }
+  return sum;
+}
+console.log(testing(5));
 
 
 //* ######################################## */
