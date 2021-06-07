@@ -48,7 +48,6 @@ function cc(card) {
       return count + " Bet";
     } else {
       return count + " Hold";
-
     }
   } else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') {
     count--;
@@ -57,10 +56,8 @@ function cc(card) {
       return count + " Hold";
     } else {
       return count + " Bet";
-
     }
   }
-
 }
 
 console.log(cc(2));
