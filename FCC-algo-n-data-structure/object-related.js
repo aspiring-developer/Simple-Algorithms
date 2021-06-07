@@ -41,4 +41,19 @@ var testObj = {
 
 var playerNumber =16;       // Change this line
 var player = testObj[playerNumber];   // Change this line
-console.log(player)
+console.log(player);
+
+//************************************************ */
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+myDog.name = "Happy Coder";
+const changed1 = myDog.friends[1]= "New Friend";
+console.log(changed1 + " <-- ")
+console.log(myDog.friends)
