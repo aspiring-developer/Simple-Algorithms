@@ -192,8 +192,8 @@ var ourStorage = {
     "bottom drawer": "soda"
   }
 };
-console.log(ourStorage.cabinet["top drawer"].folder2);
-console.log(ourStorage.desk.drawer);
+//console.log(ourStorage.cabinet["top drawer"].folder2);
+//console.log(ourStorage.desk.drawer);
 //************************************* */
 
 var myStorage = {
@@ -201,7 +201,7 @@ var myStorage = {
     "inside": {
       "glove box": "maps",
       "passenger seat": "crumbs"
-     },
+    },
     "outside": {
       "trunk": "jack"
     }
@@ -209,4 +209,45 @@ var myStorage = {
 };
 
 var gloveBoxContents = myStorage.car.inside["glove box"];
-console.log(gloveBoxContents);
+//console.log(gloveBoxContents);
+
+//********************************************** */
+
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": {
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
+//console.log(ourStorage.cabinet["top drawer"].folder2);
+//console.log(ourStorage.desk.drawer);
+
+//******************************************** */
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+var secondTree = myPlants[1].list[1];
+//console.log(secondTree);
+//******************************************* */
