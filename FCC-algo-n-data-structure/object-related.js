@@ -9,10 +9,10 @@ var myDog = {
 
   // Only change code above this line
 };
-console.log(myDog.name);
-console.log(myDog.friends1[1]);
-console.log(myDog.friends2.b);
-console.log(myDog["Spaced property"]);
+//console.log(myDog.name);
+//console.log(myDog.friends1[1]);
+//console.log(myDog.friends2.b);
+//console.log(myDog["Spaced property"]);
 
 //*************************************** */
 
@@ -27,7 +27,7 @@ var testObj = {
 
 var entreeValue = testObj["an entree"];   // Change this line
 var drinkValue = testObj["the drink"];    // Change this line
-console.log(entreeValue, drinkValue);
+//console.log(entreeValue, drinkValue);
 
 //****************************************** */
 // Setup
@@ -41,7 +41,7 @@ var testObj = {
 
 var playerNumber = 16;       // Change this line
 var player = testObj[playerNumber];   // Change this line
-console.log(player);
+//console.log(player);
 
 //************************************************ */
 // Setup
@@ -55,8 +55,8 @@ var myDog = {
 // Only change code below this line
 myDog.name = "Happy Coder";
 const changed1 = myDog.friends[1] = "New Friend";
-console.log(changed1 + " <-- ")
-console.log(myDog.friends)
+//console.log(changed1 + " <-- ")
+//console.log(myDog.friends)
 
 //*************************************************** */
 var myDog = {
@@ -66,7 +66,7 @@ var myDog = {
   "friends": ["freeCodeCamp Campers"]
 };
 
-console.log(myDog.bark = "woof woof");
+//console.log(myDog.bark = "woof woof");
 //**********************************************8 */
 // Setup
 var myDog = {
@@ -77,10 +77,10 @@ var myDog = {
   "bark": "woof"
 };
 
-console.log(myDog); // before delete
+//console.log(myDog); // before delete
 
 delete myDog.friends;
-console.log(myDog); // after delete
+//console.log(myDog); // after delete
 // Only change code below this line
 //********************************************* */
 
@@ -103,7 +103,7 @@ function phoneticLookup(val) {
   return result;
 }
 
-console.log(phoneticLookup("charlie"));
+//console.log(phoneticLookup("charlie"));
 
 //********************************************* */
 // Setup
@@ -125,5 +125,88 @@ function phoneticLookup(val) {
   return result;
 }
 
-console.log(phoneticLookup("charlie"));
+//console.log(phoneticLookup("charlie"));
 //******************************************** */
+
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not found";
+  };
+
+  // Only change code above this line
+}
+//let obj = {
+//  gift: "pony", pet: "kitten", bed: "sleigh"
+//}
+//console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift"));
+//console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "pet"));
+//console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "house"));
+//console.log(checkObj({city: "Seattle"}, "city"));
+//console.log(checkObj({city: "Seattle"}, "district"));
+//console.log(checkObj({pet: "kitten", bed: "sleigh"}, "gift"));
+
+//***************************************************** */
+
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true,
+
+  },
+
+  {
+    "artist": "New Artist",
+    "title": "Guitarist",
+    "release_year": 1968,
+    "formats": [
+      "VCD",
+      "BlueRay",
+      "PenDrive"
+    ]
+  }
+
+];
+
+//console.log(myMusic);
+
+//********************************************** */
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": {
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
+console.log(ourStorage.cabinet["top drawer"].folder2);
+console.log(ourStorage.desk.drawer);
+//************************************* */
+
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
