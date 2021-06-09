@@ -81,7 +81,6 @@ var myDog = {
 
 delete myDog.friends;
 //console.log(myDog); // after delete
-// Only change code below this line
 //********************************************* */
 
 
