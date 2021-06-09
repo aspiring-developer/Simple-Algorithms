@@ -27,7 +27,7 @@ function findCertainBear() {
   let smallestHeightBearName = sortedFromFilteredList[0].name;
   return smallestHeightBearName;
 }
-console.log(findCertainBear());
+//console.log(findCertainBear());
 
 //*********** ANOTHER SYNTAX (WITH TERNARY OPERATOR) ************** */
 //function findCertainBear() {
@@ -39,3 +39,30 @@ console.log(findCertainBear());
 //}
 //findCertainBear();
 //console.log(findCertainBear());
+
+//####################### TRIAL AGAIN ##################
+/*
+- Given a list of bears, each with a given name and height,
+- Print the name of the bear with the smallest height...
+...that is greater than or equal to 10.
+*/
+const bearList2 = [
+  { name: "Mama Bear", height: 9 },
+  { name: "Papa Bear", height: 12 },
+  { name: "Dada Bear", height: 11 },
+  { name: "Bro Bear", height: 8 },
+  { name: "Sis Bear", height: 6 },
+  { name: "Grandpa Bear", height: 10 },
+  { name: "Neighbor Bear", height: 14 }
+]
+
+let filtered = bearList2.filter(function(eachBear) {
+  console.log(eachBear);
+  return eachBear.height >= 10;
+
+});
+let sortedFromFiltered = filtered.sort(function(a,b) {
+   return a.height - b.height;
+})
+let finalResult = sortedFromFiltered[0].name;
+console.log(finalResult);

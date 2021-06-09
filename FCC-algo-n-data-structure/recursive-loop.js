@@ -39,4 +39,28 @@ function multiply3(arr3, n) {
     return 1;
   }
 }
-console.log(multiply3([1, 2, 3, 4, 5,], 5));
+//console.log(multiply3([1, 2, 3, 4, 5,], 5));
+
+////////////////////////////////////////////////////////////
+
+function multiply4(n) {
+  while (n >= 1) {
+    return n * multiply4(n - 1);
+  }
+  return true;
+}
+
+console.log(multiply4(5));
+
+/////////////////////////////////////////////
+function sum(arr, n) {
+  // Only change code below this line
+  if (n <= 0) {
+    return 1;
+  } else{
+    return sum(arr, n - 1) + arr[n-1];
+
+  }
+  // Only change code above this line
+}
+console.log(sum([1, 2, 3, 4, 5], 5));
