@@ -89,14 +89,14 @@ const HIGH_TEMPERATURES = {
 
 //const today = HIGH_TEMPERATURES.today;
 //const tomorrow = HIGH_TEMPERATURES.tomorrow;
-const {today, tomorrow} = HIGH_TEMPERATURES;
+const { today, tomorrow } = HIGH_TEMPERATURES;
 //console.log(tomorrow);
 //////////////////////////////////////////
 
-const HIGH_TEMPERATURES1 = {yesterday1: 75, today1: 77, tomorrow1: 80};
+const HIGH_TEMPERATURES1 = { yesterday1: 75, today1: 77, tomorrow1: 80 };
 //const highToday1 = HIGH_TEMPERATURES1.today1;
 //const highTomorrow1 = HIGH_TEMPERATURES1.tomorrow1;
-const {yesterday1: yesterdayValue, today1: todayValue, tomorrow1: tomorrowValue} = HIGH_TEMPERATURES1;
+const { yesterday1: yesterdayValue, today1: todayValue, tomorrow1: tomorrowValue } = HIGH_TEMPERATURES1;
 //console.log(yesterdayValue);  // prints 75
 ////////////////////////////////////////////////
 
@@ -110,9 +110,48 @@ const LOCAL_FORECAST = {
 
 //const lowToday = LOCAL_FORECAST.today.low;
 //const highToday = LOCAL_FORECAST.today.high;
-const {today:{low: lowToday, high: highToday}} = LOCAL_FORECAST;
-console.log(lowToday, highToday);
+const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
+//console.log(lowToday, highToday);
+
+////////////////////////////////////////////////
+
+// DESTRUCTURING FROM ARRAY
+// swap the value of a and b by swapping with destructuring
+let a = 8, b = 6;
+[a, b] = [b, a];
+//console.log(a, b);
+
+////////////////////////////////////////////////
+
+// DESTRUCTURING ARRAY with REST PARAMETER
+//
+function removeFirstTwo(list) {
+  // Only change code below this line
+  const [, , ...prr] = list; // Change this line
+  // Only change code above this line
+  return prr;
+}
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arr = removeFirstTwo(source);
+console.log(arr);
+
+//////////////////////////////////////////////
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+//const half = (stats) => (stats.max + stats.min) / 2.0;
+const half = ({max, min})=> {
+  return (max + min) / 2.0;
+}
+console.log(half(stats));
 
 
-
-
+//const half = ({ max, min }) => (max + min) / 2.0;
