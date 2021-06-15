@@ -17,9 +17,9 @@ const carrot = new Vegetable('carrot');
 
 // Only change code below this line
 class Thermostat {
-  constructor(fTemp) {
-    let convertedTemp = 5 / 9 * (fTemp - 32);
-    this.celsius = convertedTemp;
+  constructor(f) {
+    let celsius = 5 / 9 * (f - 32);
+    this.celsius = celsius;
   };
 
   get temperature() {
@@ -38,3 +38,23 @@ console.log(temp);
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
 console.log(temp);
+
+//////////////////////////////////////
+// EXPORT FALLBACK
+//export default function subtract(x, y) {
+//  return x - y;
+//}
+
+//// More examples
+//export default function add(x, y) {
+//  return x + y;
+//}
+
+//export default function(x, y) {
+//  return x + y;
+//}
+/////////////////////////////////////////////
+
+
+
+
