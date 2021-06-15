@@ -68,5 +68,4 @@ makeServerRequest3.then(result => {
   console.log(result);
 }).catch(error=>{
   console.log(error, "ERROR!!!!!")
-})
-;
+});
