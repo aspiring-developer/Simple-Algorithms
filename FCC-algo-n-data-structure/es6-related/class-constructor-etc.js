@@ -18,21 +18,22 @@ const carrot = new Vegetable('carrot');
 // Only change code below this line
 class Thermostat {
   constructor(fTemp) {
-    this.temp = 5 / 9 * (fTemp - 32);
+    let convertedTemp = 5 / 9 * (fTemp - 32);
+    this.celsius = convertedTemp;
   };
 
   get temperature() {
-    return this.temp;
+    return this.celsius;
   }
 
   set temperature(updatedTemp) {
-    this.temp = updatedTemp;
+    this.celsius = updatedTemp;
   }
 }
 // Only change code above this line
 
 const thermos = new Thermostat(68); // Setting in temperature scale
-let temp = thermos.temperature; // 24.44 in Celsius
+let temp = thermos.temperature; // 20 in Celsius
 console.log(temp);
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
