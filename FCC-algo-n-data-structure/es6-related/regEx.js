@@ -55,6 +55,47 @@ let result7 = unRegex.test(exampleStr);
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi; // Change this line
 let result8 = quoteSample.match(vowelRegex); // Change this line
-console.log(result8);
+//console.log(result8);
 
 //////////////////////////////////////////////
+//Match Letters of the Alphabet
+let catStr = "cat";
+let batStr = "bat";
+let matStr = "mat";
+//let bgRegex = /[a-e]at/;
+//console.log(catStr.match(bgRegex));
+//console.log(batStr.match(bgRegex));
+//console.log(matStr.match(bgRegex));
+//.............................
+let quote = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // Change this line
+let result9 = quote.match(alphabetRegex); // Change this line
+//console.log(result9);
+
+//////////////////////////////////////////////////
+// Match Numbers and Letters of the Alphabet
+let jennyStr = "Jenny8675309";
+let myRegex = /[a-z0-9]/ig;
+let result10 = jennyStr.match(myRegex);
+//console.log(result10);
+//.................................
+let quote1 = "Blueberry 3.141592653s are delicious.";
+let myRegex1 = /[h-s2-6]/gi; // Change this line
+let result11 = quote1.match(myRegex1); // Change this line
+//console.log(result11);
+
+////////////////////////////////////////////
+// Match Single Characters Not Specified
+
+let quote12 = "3 blind mice.";
+let myRegex12 = /[^aeiou0-9]/gi; // Change this line
+let result12 = quote12.match(myRegex12); // Change this line
+//console.log(result12);
+
+/////////////////////////////////////////////
+// Match Characters that Occur One or More Times
+let difficultSpelling = "Mississippi";
+let myRegex13 = /s+/g; // Change this line
+let result13 = difficultSpelling.match(myRegex13);
+
+console.log(result13);
