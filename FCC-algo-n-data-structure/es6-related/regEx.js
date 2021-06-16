@@ -80,22 +80,90 @@ let result10 = jennyStr.match(myRegex);
 //console.log(result10);
 //.................................
 let quote1 = "Blueberry 3.141592653s are delicious.";
-let myRegex1 = /[h-s2-6]/gi; // Change this line
-let result11 = quote1.match(myRegex1); // Change this line
+let myRegex1 = /[h-s2-6]/gi;
+let result11 = quote1.match(myRegex1);
 //console.log(result11);
 
 ////////////////////////////////////////////
 // Match Single Characters Not Specified
 
 let quote12 = "3 blind mice.";
-let myRegex12 = /[^aeiou0-9]/gi; // Change this line
-let result12 = quote12.match(myRegex12); // Change this line
+let myRegex12 = /[^aeiou0-9]/gi;
+let result12 = quote12.match(myRegex12);
 //console.log(result12);
 
 /////////////////////////////////////////////
 // Match Characters that Occur One or More Times
 let difficultSpelling = "Mississippi";
-let myRegex13 = /s+/g; // Change this line
+let myRegex13 = /s+/g;
 let result13 = difficultSpelling.match(myRegex13);
 
-console.log(result13);
+//console.log(result13);
+
+/////////////////////////////////////////////
+// Match Characters that Occur Zero or More Times
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!"
+let chewieRegex = /Aa*/; // Change this line
+let result14 = chewieQuote.match(chewieRegex);
+//console.log(result14);
+
+///////////////////////////////////////////////
+// Find Characters with Lazy Matching
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex111 = /<[h]*?1>/; // Change this line
+let result = text.match(myRegex111);
+
+/////////////////////////////////////////////
+// Find One or More Criminals in a Hunt
+/* Write a greedy regex that finds one or more criminals within a group of other people. A criminal is represented by the capital letter C.
+""
+"ABC"
+"abcabc"
+ */
+
+let reCriminals = /C+/g;
+
+/////////////////////////////////////////////////
+// Match Beginning String Patterns
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let result15 = calRegex.test(rickyAndCal);
+//console.log(result15);
+
+/////////////////////////////////////////////////
+// Match Ending String Patterns
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result16 = lastRegex.test(caboose);
+//console.log(result16);
+
+////////////////////////////////////////////////////////
+// Match All Letters and Numbers
+let quoteSample17 = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result17 = quoteSample17.match(alphabetRegexV2).length;
+//console.log(result17);
+
+////////////////////////////////////////////
+// Match Everything But Letters and Numbers
+let quoteSample18 = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result18 = quoteSample18.match(nonAlphabetRegex).length;
+//console.log(result18);
+
+///////////////////////////////////////////////
+// Match all Numbers
+
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let result19 = movieName.match(numRegex).length;
+console.log(result19);
+
+////////////////////////////////////////////////
+// Match All Non-Numbers
+let movieName20 = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result20 = movieName20.match(noNumRegex).length;
+console.log(result20);
