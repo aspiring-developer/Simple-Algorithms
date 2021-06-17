@@ -28,9 +28,23 @@ arr.splice(1, 4) // this is the code (It starts from index 1 and includes 4 elem
 /* Modify the function using splice() to remove the first two elements of the array
 and add 'DarkSalmon' and 'BlanchedAlmond' in their respective places. */
 function htmlColorNames(arr) {
-  arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+  arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
   return arr;
 }
 
-console.table(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush',
-  'PaleTurquoise', 'FireBrick']));
+//console.table(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush',
+//  'PaleTurquoise', 'FireBrick']));
+
+/////////////////////////////////////////////////
+//Copy Array Items Using slice()
+/* Modify the function using slice() to extract information from the argument array
+and return a new array that contains the string elements warm and sunny.  */
+
+function forecast(arr) {
+  let sliced = arr.slice(2, 4);
+
+  return sliced;
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
