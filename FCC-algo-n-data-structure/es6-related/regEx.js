@@ -159,11 +159,66 @@ let result18 = quoteSample18.match(nonAlphabetRegex).length;
 let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/g; // Change this line
 let result19 = movieName.match(numRegex).length;
-console.log(result19);
+//console.log(result19);
 
 ////////////////////////////////////////////////
 // Match All Non-Numbers
 let movieName20 = "2001: A Space Odyssey";
 let noNumRegex = /\D/g; // Change this line
 let result20 = movieName20.match(noNumRegex).length;
-console.log(result20);
+//console.log(result20);
+
+//////////////////////////////////////////////
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// Restrict Possible Usernames
+let username21 = "JackOfAllTrades";
+let userCheck21 = /change code here/; // Change this line
+let result21 = userCheck21.test(username21);
+// SEE RESULT IN CODE BLOCK BELOW
+
+//.......................................
+let username22 = "JackOfAllTrades";
+let userCheck22 = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result22 = userCheck22.test(username22);
+//console.log(result22)
+
+/* EXPLANATION OF REGEX USED ABOVE  */
+//  ^ --> start of input
+//  [a-z] --> first character is a letter
+//  [a-z]+ --> following characters are letters
+//  \d*$ --> input ends with 0 or more digits
+//  | --> or
+//  ^[a-z] --> first character is a letter
+//  \d\d+ --> following characters are 2 or more digits
+//  $ --> end of input
+//  i --> ignore case of input
+//.......................
+//SAME THING CAN BE DONE THIS WAY TOO
+let username23 = "JackOfAllTrades";
+const userCheck23 = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;
+let result23 = userCheck23.test(username23);
+//console.log(result23);
+
+/* EXPLANATION OF REGEX USED ABOVE  */
+//  ^ --> start of input
+//  [a-z] --> first character is a letter
+//  [0-9]{2,0} --> ends with two or more numbers
+//  | --> or
+//  [a-z]+ --> has one or more letters next
+//  \d* --> and ends with zero or more numbers
+//  $ --> end of input
+//  i --> ignore case of input
+
+//////////////////////////////////////////
+// Match Whitespace
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result24 = sample.match(countWhiteSpace);
+//console.log(result24);
+
+///////////////////////////////////////////
+// Specify Upper and Lower Number of Matches
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result25 = ohRegex.test(ohStr);
+console.log(result25);
