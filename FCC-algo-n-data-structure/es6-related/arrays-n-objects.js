@@ -72,7 +72,43 @@ function copyMachine(arr, num) {
 the array ['learning', 'to', 'code', 'is', 'fun'].  */
 function spreadOut() {
   let fragment = ['to', 'code'];
-  let sentence = ['learning',...fragment,'is', 'fun'];
+  let sentence = ['learning', ...fragment, 'is', 'fun'];
   return sentence;
 }
-console.log(spreadOut());
+//console.log(spreadOut());
+
+/////////////////////////////////////////////////////
+// Check For The Presence of an Element With indexOf()
+/* Modify the function using indexOf() so that it returns true if
+the passed element exists on the array, and false if it does not. */
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  let checking = arr.indexOf(elem);
+  if (checking === -1) {
+    return false;
+  } else {
+    return true;
+  }
+  // Only change code above this line
+}
+
+//console.log(quickCheck(['squash', 'onions', 'shallots'], 'shallots'));
+
+//////////////////////////////////////////////////////
+// Iterate Through All an Array's Items Using For Loops
+/* Modify the function, using a for loop, to return a filtered version of the passed
+array such that any array nested within arr containing elem has been removed. */
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // Only change code below this line
+for (let i = 0; i <arr.length; i++) {
+//if(!arr[i].includes(elem)) {
+if(arr[i].indexOf(elem)==-1) {
+  newArr.push(arr[i]);
+}
+}
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(filteredArray([[3, 2, 3], [1, 3, 5], [3, 13, 26], [19, 3, 9]], 3));
