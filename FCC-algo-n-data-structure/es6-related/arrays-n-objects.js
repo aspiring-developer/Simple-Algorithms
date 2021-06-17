@@ -101,14 +101,68 @@ array such that any array nested within arr containing elem has been removed. */
 function filteredArray(arr, elem) {
   let newArr = [];
   // Only change code below this line
-for (let i = 0; i <arr.length; i++) {
-//if(!arr[i].includes(elem)) {
-if(arr[i].indexOf(elem)==-1) {
-  newArr.push(arr[i]);
-}
-}
+  for (let i = 0; i < arr.length; i++) {
+    //if(!arr[i].includes(elem)) {
+    if (arr[i].indexOf(elem) == -1) {
+      newArr.push(arr[i]);
+    }
+  }
   // Only change code above this line
   return newArr;
 }
 
-console.log(filteredArray([[3, 2, 3], [1, 3, 5], [3, 13, 26], [19, 3, 9]], 3));
+//console.log(filteredArray([[3, 2, 3], [1, 3, 5], [3, 13, 26], [19, 3, 9]], 3));
+
+////////////////////////////////////////////
+////////////////////////////////////////////////////
+// Create complex multi-dimensional arrays
+// DEEP ARRAY (NESTED)
+// EXAMPLE:
+let nestedArray;
+nestedArray = [['deep'], [['deeper'], ['deeper']],
+[[['deepest'], ['deepest']],
+[[['deepest-est?']]]]];
+//................................
+/*  Modify myNestedArray, using any combination of strings, numbers, and booleans for data elements, so that it has exactly five levels of depth (remember, the outer-most array is level 1). Somewhere on the third level, include the string deep, on the fourth level, include the string deeper, and on the fifth level, include the string deepest. */
+
+// NESTED VIEW (FOR COMPOSITION, SEE EASY WAY BELOW)
+let myNestedArray = [
+  //------------------- layer 1
+  'iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth',  // myNestedArray[0] to [5]
+
+  //------------------- layer 2
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'], // myNestedArray[6]
+
+  //------------------- layer 3
+  [
+    ['loop', 'shift', 6, 7, 1000, 'method', 'deep'] // myNestedArray[7][0]
+  ],
+
+  //------------------- layer 4
+  [
+    [
+      ['concat', false, true, 'spread', 'array', 'deeper'] // myNestedArray[8][0][0]
+    ]
+  ],
+
+  //------------------- layer 5
+  [
+    [
+      [
+        ['mutate', 1327.98, 'splice', 'slice', 'push', 'deepest'] // myNestedArray[9][0][0][0]
+      ]
+    ]
+  ]
+
+];
+//console.log(myNestedArray[9][0][0][0]); // LAST array
+//.........................................
+
+let myNestedArray1 = [
+  'iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth', // 1st layer // Element 0,1,2,3,4,5
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'],  // 2nd layer // Element [6]
+  [['loop', 'shift', 6, 7, 1000, 'method', 'deep']],  // 3rd layer  // [7][0]
+  [[['concat', false, true, 'spread', 'array', 'deeper']]],  // 4th layer [8][0][0]
+  [[[['mutate', 1327.98, 'splice', 'slice', 'push', 'deepest']]]]  // 5th layer [9][0][0][0]
+];
+console.log(myNestedArray1[7][0][5]); // prints 'method'
