@@ -165,4 +165,6 @@ let myNestedArray1 = [
   [[['concat', false, true, 'spread', 'array', 'deeper']]],  // 4th layer [8][0][0]
   [[[['mutate', 1327.98, 'splice', 'slice', 'push', 'deepest']]]]  // 5th layer [9][0][0][0]
 ];
-console.log(myNestedArray1[7][0][5]); // prints 'method'
+//console.log(myNestedArray1[7][0][5]); // prints 'method'
+
+////////////////////////////////////////////////////////////
