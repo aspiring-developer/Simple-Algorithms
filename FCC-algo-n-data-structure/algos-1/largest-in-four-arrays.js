@@ -39,7 +39,7 @@ function largestOfFour2(arr2) {
   let result = [];
   for (let i = 0; i < arr2.length; i++) {
     let sorted2 = arr2[i].sort(function (a, b) { return a - b });
-    console.log(sorted2[sorted2.length-1] + " <--sorted2[sorted2.length-1]");
+    result.push(sorted2[sorted2.length - 1]);
   }
   console.log(result);
   return result;
