@@ -35,18 +35,15 @@ largestOfFour1([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 8
 // Return Largest Numbers in Arrays
 //Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
 
-function largestOfFour(arr) {
-let result = [];
-for (let i = 0; i < arr.length; i++) {
-  let largest = arr[i][0];
-  for (let j = 0; j < arr[i].length; j++) {
-    console.log(arr[i][j]);
-    if(arr[i][j] > largest) {
-      largest = arr[i][j]
-      result.push(largest)
-    }
+function largestOfFour2(arr2) {
+  let result = [];
+  for (let i = 0; i < arr2.length; i++) {
+    let sorted2 = arr2[i].sort(function (a, b) { return a - b });
+    console.log(sorted2[sorted2.length-1] + " <--sorted2[sorted2.length-1]");
   }
+  console.log(result);
+  return result;
 }
-return result;
-}
-largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+largestOfFour2([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
