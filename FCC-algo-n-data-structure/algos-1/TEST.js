@@ -3,12 +3,11 @@
 function largestOfFour(arr) {
   let largest = [];
   for (let i = 0; i < arr.length; i++) {
-  let sorted = arr[i].sort(function(a,b) {return a-b});
-  console.log(sorted);
-  largest.push(sorted(sorted[i].length-1));
-
-}
-console.log(largest);
+    let sorted = arr[i].sort(function (a, b) { return a - b });
+    //console.log(sorted);
+    largest.push(sorted[sorted.length-1]);
+  }
+  console.log(largest);
   return largest;
 }
 
