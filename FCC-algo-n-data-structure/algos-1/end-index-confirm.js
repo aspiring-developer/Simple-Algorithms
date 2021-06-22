@@ -13,28 +13,22 @@
 //////////////////////////////////////
 
 function confirmEnding(str, target) {
-  if (target === str.slice(str.length - target.length)) {
+  let sliced = str.slice(str.length - target.length);
+  if (target === sliced) {
     return true;
   } else {
     return false;
   }
 }
 
-console.log(confirmEnding("Bastian", "an"));
+console.log(confirmEnding("Connor", "n"));
 console.log(confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification"));
-
-
-//////////////////////////////////////
-// if(str.substring(target) !== -1)
-
 //////////////////////////////////////
 
+//////////////////////////////////////
 function confirmEnding2(str2, target2) {
   return str2.slice(-target2.length) === target2
 }
-
-console.log(confirmEnding2("Bastian", "an"));
+console.log(confirmEnding2("Bastian", "n"));
 console.log(confirmEnding2("Walking on water and developing software from a specification are easy if both are frozen", "specification"));
-
-
 //////////////////////////////////////
