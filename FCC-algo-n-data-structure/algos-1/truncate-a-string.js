@@ -18,7 +18,6 @@ function truncateString(str, num) {
 // Truncating from beginning up to given length, then appending ellipses
 function truncateString2(str2, num2) {
   let truncated2 = '';
-  for (let i = 0; i < str2.length; i++) {
     if (str2.length > num2) {
       truncated2 = str2.slice(0, num2);
       truncated2 += "...";
@@ -26,7 +25,6 @@ function truncateString2(str2, num2) {
     } else {
       return str2;
     }
-  }
 }
 console.log(truncateString2("A-tisket a-tasket A green and yellow basket", 8));
 console.log(truncateString2("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));

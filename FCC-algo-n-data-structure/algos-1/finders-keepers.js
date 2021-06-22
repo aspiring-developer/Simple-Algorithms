@@ -4,15 +4,18 @@ passes a 'truth test'. This means that given an element x, the 'truth test' is p
 if func(x) is true. If no element passes the test, return undefined. */
 
 function findElement(arr, func) {
+  let result = '';
   for (let i = 0; i < arr.length; i++) {
     if (func(arr[i]) === true) {
-      console.log(arr[i]);
-      return arr[i];
+      result = arr[i];
     }
+
   }
-  return undefined;
+  //console.log(result);
+  return result;
 }
 
-findElement([1, 2, 3, 5], num => num % 2 === 0);  // 2?
-findElement([1, 3, 5, 8, 9, 10], function (num) { return num % 2 === 0; }); // 8
-findElement([1, 3, 5, 9], function (num) { return num % 2 === 0; }); // undefined
+console.log(findElement([1, 2, 3, 5], num => num % 2 === 0));  // 2?
+console.log(findElement([1, 3, 5, 8, 9, 10], function (num) { return num % 2 === 0; })); // 8
+console.log(findElement([1, 3, 5, 9], function (num) { return num % 2 === 0; })); // undefined
+
