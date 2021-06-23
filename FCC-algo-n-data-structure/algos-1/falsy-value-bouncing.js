@@ -20,4 +20,3 @@ function bouncer(arr) {
 bouncer([7, "ate", "", false, 9]);
 bouncer([false, null, 0, NaN, undefined, ""])
 ///////////////////////////////////////////////
-
