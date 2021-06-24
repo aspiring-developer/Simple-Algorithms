@@ -1,23 +1,39 @@
-//Falsy Bouncer
-//Remove all falsy values from an array.
 
-//Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
-
-//Hint: Try converting each value to a Boolean.
 
 ///////////////////////////////////////////////
-function bouncer(arr) {
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    let converted = Boolean(arr[i]);
-    if (converted === true) {
-      result.push(arr[i]);
+function testing(arr) {
+
+  let result = 0;
+
+  let increment = 0;
+
+  while (result === 0) {
+    ++increment;
+    console.log(increment)
+    if (arr.indexOf(increment) === -1) {
+      result = increment;
+
     }
   }
-  console.log(result);
   return result;
 }
-bouncer([7, "ate", "", false, 9]);
-bouncer([false, null, 0, NaN, undefined, ""])
+let givenArray = [1, 3, 6, 4, 1, 2];
+//let givenArray = [-1, -3];
+console.log(testing(givenArray));  // 5
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+//function testing(arr) {
+//  let result = 0;
+//for (let i = 0; i < arr.length; i++) {
+//  if(arr[i+1] === arr[i] + 1) {
+//    result = arr[i];
+//  }
+
+//}
+
+//  return result;
+//}
+//let givenArray = [1,3,6,4,1,2];
+//console.log(givenArray);  // 5
 ///////////////////////////////////////////////
 
