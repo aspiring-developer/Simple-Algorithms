@@ -5,23 +5,15 @@
 /////////////////////////////////////////////////
 
 function chunkArrayInGroups(arr, size) {
-  let finalArr = [];
-  let newArr1 = [];
-  let newArr2 = [];
-for (let i = 0; i < arr.length; i++) {
-
-  arr[i].split('');
-  console.log(arr[i])
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += size) {
+    newArr.push(arr.slice(i, i + size));
+    console.log(i + " <--i");
+    console.log(i+size + " <--i+size");
+  }
+  return newArr;
 }
-
-
-  //let splitted = arr.split(' ');
-  //console.log(splitted)
-
-
-  return finalArr;
-}
-chunkArrayInGroups(["a", "b", "c", "d"], 2)
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 //console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 
 /////////////////////////////////////////////
