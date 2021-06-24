@@ -1,39 +1,22 @@
+/* MutationsPassed
+Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+
+For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+
+The arguments ["hello", "hey"] should return false because the string hello does not contain a y.
+
+Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien. */
 
 
-///////////////////////////////////////////////
-function testing(arr) {
+function mutation(arr) {
+  let arr0 = arr[0].toLowerCase();
+  let arr1 = arr[1].toLowerCase();
 
-  let result = 0;
-
-  let increment = 0;
-
-  while (result === 0) {
-    ++increment;
-    console.log(increment)
-    if (arr.indexOf(increment) === -1) {
-      result = increment;
-
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr0.indexOf(arr1[i]) === -1) {
+      return false;
     }
   }
-  return result;
+  return true;
 }
-let givenArray = [1, 3, 6, 4, 1, 2];
-//let givenArray = [-1, -3];
-console.log(testing(givenArray));  // 5
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-//function testing(arr) {
-//  let result = 0;
-//for (let i = 0; i < arr.length; i++) {
-//  if(arr[i+1] === arr[i] + 1) {
-//    result = arr[i];
-//  }
-
-//}
-
-//  return result;
-//}
-//let givenArray = [1,3,6,4,1,2];
-//console.log(givenArray);  // 5
-///////////////////////////////////////////////
-
+console.log(mutation(["hello", "hey"]));

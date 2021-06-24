@@ -11,6 +11,7 @@
 function mutation(arr) {
   let index0 = arr[0].toLowerCase();
   let index1 = arr[1].toLowerCase();
+
   for (let i = 0; i < index1.length; i++) {
     if (index0.indexOf(index1[i]) === -1) {
       return false;
