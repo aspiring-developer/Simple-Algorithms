@@ -38,5 +38,12 @@ function chunkArrayInGroups(arr, size) {
 }
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 //console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
-
+//...............................
+function chunkArrayInGroups1(arr1, size1) {
+  let newArr1 = [];
+  while (arr1.length > 0) {
+    newArr1.push(arr1.splice(0, size1));
+  }
+  return newArr1;
+}
 /////////////////////////////////////////////
