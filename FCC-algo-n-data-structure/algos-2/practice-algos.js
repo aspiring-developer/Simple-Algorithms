@@ -10,25 +10,44 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  return 'Let\'s Start'
+  let reversedStr = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];
+  }
+  return reversedStr;
 }
-console.log(reverseString('hello'));
+//console.log(reverseString('hello'));
 
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  let reversedStr = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];
+  }
+  return str === reversedStr;
+}
 //console.log(isPalindrome('racecar'));
-
 
 
 // CHALLENGE 3: REVERSE AN INTEGER
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
 
-function reverseInt(int) {}
-//console.log(reverseInt(12345));
+function reverseInt(int) {
+  let convertedToStr = int.toString();
+  let reversedInt = 0;
+for (let i = 0; i < convertedToStr.length; i++) {
+  reversedInt = convertedToStr[i] + reversedInt;
+  //console.log(typeof(reversedInt));
+  let convertedToInt = parseInt(reversedInt);
+  //console.log(typeof(convertedToInt));
+}
+  return reversedInt;
+}
+console.log(reverseInt(12345));
 
 
 
@@ -36,7 +55,7 @@ function reverseInt(int) {}
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-function capitalizeLetters(str) {}
+function capitalizeLetters(str) { }
 //console.log(capitalizeLetters('i love javascript'));
 
 
@@ -45,7 +64,7 @@ function capitalizeLetters(str) {}
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
 // ex. maxCharacter('javascript') == 'a'
-function maxCharacter(str) {}
+function maxCharacter(str) { }
 //console.log(maxCharacter('which character occurs more?'));
 
 
@@ -53,7 +72,7 @@ function maxCharacter(str) {}
 
 // CHALLENGE 6: FIZZBUZZ
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
-function fizzBuzz() {}
+function fizzBuzz() { }
 //console.log(fizzBuzz());
 
 
