@@ -77,28 +77,65 @@ function capitalizeLetters(str) {
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
 // ex. maxCharacter('javascript') == 'a'
+//function maxCharacter(str) {
+//  let splitted = str.split('')
+//  for (let i = 0; i < splitted.length; i++) {
+//    if (splitted[splitted[i]] > 0) {
+//      splitted[splitted[i]] ++;
+//    }
+//    else {
+//      splitted[splitted[i]] = 1;
+//    }
+//  }
+//  return splitted;
+//}
+//console.log(maxCharacter('javascript'));
+//console.log(maxCharacter('which character occurs more?'));
+
+//............................................
 function maxCharacter(str) {
-  let splitted = str.split('')
-  //console.log(splitted);
-  let charCount = 0;
-  let occurrence = '';
-  for (let i = 0; i < splitted.length; i++) {
-    if (splitted[i] > charCount) {
-      occurrence = splitted(splitted[i]);
+  str = str.split('');
+  for (let i = 0; i < str.length; i++) {
+    console.log(str[i] + " <--str[i]");
+    console.log(str[str[i]] + " <--str[str[i]]"); // this is undefined, but it works below, why?
+    if (str[str[i]] > 0) {
+      str[str[i]]++;
+    }
+    else {
+      str[str[i]] = 1;
     }
   }
-  console.log(occurrence);
-  return occurrence;
+  return str;
 }
-maxCharacter('which character occurs more?');
-//console.log(maxCharacter('which character occurs more?'));
+//console.log(maxCharacter('javascript'));
+//console.log(maxCharacter('javascript'));
 
 /////////////////////////////////////////////////////////////
 
 // CHALLENGE 6: FIZZBUZZ
-// Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
-function fizzBuzz() { }
-//console.log(fizzBuzz());
+// Write a program that prints all the numbers from 1 to 100. For multiples of 3,
+//instead of the number, print "Fizz", for multiples of 5 print "Buzz".
+//For numbers which are multiples of both 3 and 5, print "FizzBuzz".
+function fizzBuzz() {
+  let output = '';
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      output += "FizzBuzz" + ', ';
+    } else if (i % 3 === 0) {
+      output += "Fizz" + ', ';
+    }
+    else if (i % 5 === 0) {
+      output += "Buzz" + ', ';
+    } else {
+      output += i + ', ';
+    }
+
+
+  }
+
+  return output;
+}
+console.log(fizzBuzz());
 
 /////////////////////////////////////////////////////////////
 
