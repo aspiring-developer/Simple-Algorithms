@@ -62,20 +62,27 @@ function titleCase(str) {
 function fizzBuzz(num) {
   let result = '';
   for (let i = 1; i <= num; i++) {
-    if (num[i] % 3 === 0) {
-      console.log(num[i]);
-      result = "Fizz";
-    } else if (num[i] % 5 === 0) {
-      result = "Buzz";
-    }
     //console.log(i);
+    if(i % 3 === 0 && i % 5 === 0) {
+      result = "FizzBuzz";
+      console.log(result);
+    }
+    if (i % 3 === 0) {
+      result = "Fizz";
+      console.log(result);
+    } else if (i % 5 === 0) {
+      result = "Buzz";
+      console.log(result);
+    } else {
+      console.log(i);
+    }
     //console.log(result);
-
   }
-  console.log(result);
+  //console.log(result);
   return result;
 }
-console.log(fizzBuzz(17));
+fizzBuzz(15);
+//console.log(fizzBuzz(100));
     ///////////////////////////////////////////////
 //   if (num[num[i]] % 3 === 0 && num[num[i]] % 5 === 0) {
 //  result = "FizzBuzz";
