@@ -55,5 +55,28 @@ function titleCase(str) {
   return result;
 }
 // titleCase("Make this sentence a title cased!");
-console.log(titleCase("Make this sentence a title cased!"))
+//console.log(titleCase("Make this sentence a title cased!"));
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+//....... MAX OCCURRING CHARACTER ....................
+function fizzBuzz(num) {
+  let result = '';
+  for (let i = 1; i <= num; i++) {
+    if (num[i] % 3 === 0) {
+      console.log(num[i]);
+      result = "Fizz";
+    } else if (num[i] % 5 === 0) {
+      result = "Buzz";
+    }
+    //console.log(i);
+    //console.log(result);
+
+  }
+  console.log(result);
+  return result;
+}
+console.log(fizzBuzz(17));
     ///////////////////////////////////////////////
+//   if (num[num[i]] % 3 === 0 && num[num[i]] % 5 === 0) {
+//  result = "FizzBuzz";
+//} else
