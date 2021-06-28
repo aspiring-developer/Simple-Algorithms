@@ -21,5 +21,39 @@ function palindromeCheck(str) {
   }
   return false;
 }
-console.log(palindromeCheck("racecar"))
+//console.log(palindromeCheck("racecar"))
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+//....... INTEGER REVERSAL ....................
+function integerReversal(num) {
+  let splitted = num.toString();
+  let reversed = '';
+  for (let i = 0; i < splitted.length; i++) {
+    reversed = splitted[i] + reversed;
+    reversed = parseInt(reversed);
+  }
+  return reversed;
+}
+//console.log(integerReversal(123))
+///////////////////////////////////////////////
+
+///////////////////////////////////////////////
+//....... TITLE CASE ....................
+function titleCase(str) {
+  let allLower = str.toLowerCase();
+  let splitted = allLower.split(' ');
+  //console.log(splitted);
+  let result = '';
+  let firstUpper = '';
+  let otherCharacters = '';
+  for (let i = 0; i < splitted.length; i++) {
+    firstUpper = splitted[i][0].toUpperCase();
+    //console.log(firstUpper);
+    otherCharacters = splitted[i].slice(1);
+    result += firstUpper + otherCharacters + ' ';
+  }
+  return result;
+}
+// titleCase("Make this sentence a title cased!");
+console.log(titleCase("Make this sentence a title cased!"))
     ///////////////////////////////////////////////
