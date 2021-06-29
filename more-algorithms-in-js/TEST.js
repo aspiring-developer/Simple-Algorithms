@@ -107,11 +107,21 @@ function fizzBuzz(num) {
   return result;
 }
 fizzBuzz(16);
-//console.log(fizzBuzz(16));
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
-// LONGEST WORD FINDER
+// LONGEST WORD FINDER (IN A SENTENCE)
+function longestWord(sentence) {
+  sentence = sentence.split(' ')
+  let longest = '';
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i].length > longest.length) {
+      longest = sentence[i];
+    }
+  }
+  return longest;
+}
+//console.log(longestWord("Find a longest character word from this sentence."));
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // ANAGRAM CHECK
