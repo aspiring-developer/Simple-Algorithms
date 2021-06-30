@@ -125,18 +125,93 @@ function longestWord(sentence) {
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // ANAGRAM CHECK
+function anagramCheck(check, target) {
+  check = check.toLowerCase().split('');
+  target = target.toLowerCase().split('');
+  let isAnagram = '';
+  if (check.length !== target.length) { return false };
+
+  for (let i = 0; i < check.length; i++) {
+    if (check.indexOf(target[i]) !== -1) {
+      isAnagram = true;
+      //console.log(isAnagram);
+    } else {
+      isAnagram = false;
+    }
+  }
+  return isAnagram;
+}
+//console.log(anagramCheck("SiLent", "listen")); // silent/listen
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // LARGEST AND SMALLEST INT FINDER
+function largestSmallestIntFinder(arr) {
+  let largestInt = 0;
+  let smallestInt = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largestInt) {
+      largestInt = arr[i];
+    }
+    if (arr[i] < smallestInt) {
+      smallestInt = arr[i];
+    }
+  }
+  //console.log(largestInt);
+  //console.log(smallestInt);
+}
+largestSmallestIntFinder([1, 32, 456, 76, 98, -2, 1000, -10000]);
+//console.log(largestSmallestIntFinder([1, 32, 456, 76, 98, -2, 1000]));
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // RECURSIVE SUM
+function recursiveSum(num) {
+  let sum = 1;
+  if (num > 0) {
+    sum = num + recursiveSum(num - 1);
+    return sum;
+  } else {
+    return null;
+  }
+}
+//console.log(recursiveSum(10));
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // NEXT POSITIVE NUMBER FINDER
+function nextPositiveNum(arr) {
+  let increment = 0;
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (result == 0) { increment++ };
+    if (arr.indexOf(increment) === -1) {
+      result = increment;
+    }
+  }
+  return result;
+}
+//console.log(nextPositiveNum([0, 1, -2, 2, 3, 4, 6, 7, 8,]));
+
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // VOWELS AND CONSONANTS FINDER
+function vowelsAndConsonants(str) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t",
+    "v", "w", "x", "y", "z"]
+  let foundVowels = [];
+  let foundConsonants = [];
+  str = str.split('');
+  console.log(str)
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(vowels[i]) !== -1) {
+      foundVowels.push(vowels[i]);
+    }
+    if (str.indexOf(consonants[i]) !== -1) {
+      foundConsonants.push(consonants[i]);
+    }
+  }
+  return { foundVowels, foundConsonants };
+}
+console.log(vowelsAndConsonants("vowels and consonants"));
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // ARRAY REVERSAL
@@ -144,9 +219,7 @@ function longestWord(sentence) {
 ////////////////////////////////////////////////
 // WORD REVERSAL
 ////////////////////////////////////////////////
-////////////////////////////////////////////////
-// ARRAY REVERSAL
-////////////////////////////////////////////////
+
 ////////////////////////////////////////////////
 // FIBONACCI SEQUENCE
 ////////////////////////////////////////////////
