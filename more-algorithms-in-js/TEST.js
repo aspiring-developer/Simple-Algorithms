@@ -199,8 +199,8 @@ function vowelsAndConsonants(str) {
     "v", "w", "x", "y", "z"]
   let foundVowels = [];
   let foundConsonants = [];
+
   str = str.split('');
-  console.log(str)
   for (let i = 0; i < str.length; i++) {
     if (str.indexOf(vowels[i]) !== -1) {
       foundVowels.push(vowels[i]);
@@ -216,23 +216,32 @@ function vowelsAndConsonants(str) {
 ////////////////////////////////////////////////
 // ARRAY REVERSAL
 function reverseArray(arr) {
-let result = [];
-for (let i = 0; i < arr.length; i++) {
-  result = arr[i] + result;
-
-}
-
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result = arr[i] + result;
+  }
   return result;
 }
 let givenArray = [["arr1-1", "arr1-2"], ["arr2-1", "arr2-2"], ["arr3-1", "arr3-2"]];
-console.log(reverseArray(givenArray));
+//console.log(reverseArray(givenArray));
+
 ////////////////////////////////////////////////
-////////////////////////////////////////////////
-// WORD REVERSAL
+// FIBONACCI SEQUENCE // 0, 1, 1, 2, 3, 5, 8, 13, 21
+function fibonacciSum() {
+  let fib = [];
+  fib[0] = 0;
+  fib[1] = 1;
+  for (let i = 2; i <= 10; i++) {
+    fib[i] = fib[i - 2] + fib[i - 1];
+  }
+  return fib;
+}
+fibonacciSum();
+console.log(fibonacciSum())
 ////////////////////////////////////////////////
 
 ////////////////////////////////////////////////
-// FIBONACCI SEQUENCE
+// WORD REVERSAL
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // FINDING DUPLICATES
