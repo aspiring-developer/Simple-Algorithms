@@ -1,16 +1,14 @@
-function maxFinder(arr) {
-  let max = -100000;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i]
-    }
+// CHUNK ARRAY
+function chunkArray(arr) {
+  let result = [];
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+result.push(arr[i][j]);
   }
-  console.log(max);
-  return max;
-  //document.getElementById("maxResultArea").innerHTML = ` <h3>The Max number in the array is: <span style="color: red"> ${max} </span> <br /> `
-  //
+
 }
-
-
-const givenArr = [23, 1, 12, 5, 7, 3, 4, 99, 101];
-console.log(maxFinder(givenArr));
+console.log(result);
+  return result;
+}
+let givenArray = [["arr1-1", "arr1-2"], ["arr2-1", "arr2-2"], ["arr3-1", "arr3-2"]];
+chunkArray(givenArray)

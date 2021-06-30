@@ -211,10 +211,21 @@ function vowelsAndConsonants(str) {
   }
   return { foundVowels, foundConsonants };
 }
-console.log(vowelsAndConsonants("vowels and consonants"));
+//console.log(vowelsAndConsonants("vowels and consonants"));
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // ARRAY REVERSAL
+function reverseArray(arr) {
+let result = [];
+for (let i = 0; i < arr.length; i++) {
+  result = arr[i] + result;
+
+}
+
+  return result;
+}
+let givenArray = [["arr1-1", "arr1-2"], ["arr2-1", "arr2-2"], ["arr3-1", "arr3-2"]];
+console.log(reverseArray(givenArray));
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // WORD REVERSAL
