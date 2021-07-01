@@ -18,4 +18,4 @@ function longestWord(str) {
   })
   return { multipleFound, singleFound };
 }
-console.log(longestWord("Find longest word in this sentence eighteen"))
+console.log(longestWord("Find longest word in this sentence eighteen"));
