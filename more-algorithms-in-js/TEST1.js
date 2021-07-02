@@ -5,16 +5,37 @@ function maxCharCount(str) {
     if (result[str[i]] > 0) {
       result[str[i]]++;
     } else {
-      result[str[i]]=1;
+      result[str[i]] = 1;
     }
   }
   return result;
 }
-console.log(maxCharCount("javascript"));
+//console.log(maxCharCount("javascript"));
 
 ////////////////////////////////////////////////////////
-
+// FINDING NEXT POSITIVE INTEGER
+function findNextPositiveInt(arr) {
+  let result = 0;
+  let increment = 0;
+  while (result === 0) {
+    increment++;
+    if (arr.indexOf(increment) === -1) {
+      result = increment;
+    }
+  }
+  return result;
+}
+//console.log(findNextPositiveInt([-1, -5, 5, 6, 3, 2, 1, 1]));
 ////////////////////////////////////////////////////////
+// FIBONACCI SEQUENCE
+function fibonacciSequence(num) {
+  let fib = [0, 1];
+  for (let i = 2; i < num; i++) {
+    fib[i] = fib[i - 2] + fib[i - 1];
+  }
+  return fib;
+}
+console.log(fibonacciSequence(10));
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
