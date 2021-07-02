@@ -1,41 +1,15 @@
-// FINDING MAX OCCURRING CHARACTER
-function maxCharCount(str) {
-  let result = {};
-  for (let i = 0; i < str.length; i++) {
-    if (result[str[i]] > 0) {
-      result[str[i]]++;
-    } else {
-      result[str[i]] = 1;
-    }
+// Sum All Numbers in a Range
+function sumAll(arr) {
+  let sum = 0;
+  arr = arr.sort(function (a, b) { return b - a });
+  for (let i = arr[1]; i <= arr[0]; i++) {
+    sum += i;
   }
-  return result;
+  return sum;
 }
-//console.log(maxCharCount("javascript"));
+console.log(sumAll([1, 4])); // [1,4] should return 10
+//sumAll([1, 4]);
 
-////////////////////////////////////////////////////////
-// FINDING NEXT POSITIVE INTEGER
-function findNextPositiveInt(arr) {
-  let result = 0;
-  let increment = 0;
-  while (result === 0) {
-    increment++;
-    if (arr.indexOf(increment) === -1) {
-      result = increment;
-    }
-  }
-  return result;
-}
-//console.log(findNextPositiveInt([-1, -5, 5, 6, 3, 2, 1, 1]));
-////////////////////////////////////////////////////////
-// FIBONACCI SEQUENCE
-function fibonacciSequence(num) {
-  let fib = [0, 1];
-  for (let i = 2; i < num; i++) {
-    fib[i] = fib[i - 2] + fib[i - 1];
-  }
-  return fib;
-}
-console.log(fibonacciSequence(10));
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
