@@ -51,8 +51,23 @@ function diffArray1(arr) {
 }
 //console.log(diffArray([1, 2, 3, 5, 9, 7, 12], [1, 2, 3, 5, 9, 8, 10, 11]));
 // diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]));
+//console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]));
 ////////////////////////////////////////////////////////
+// Largest number finder
+function largestNumFinder(arr) {
+  let largest = 0;
+  let smallest = 0;
+for (let i = 0; i < arr.length; i++) {
+  if(arr[i]>largest) {
+    largest = arr[i];
+  }
+  if(arr[i]<smallest) {
+    smallest = arr[i];
+  }
+}
+  return {largest, smallest};
+}
+console.log(largestNumFinder([1, 5, 6, 100, 7, 2021, -2]));
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
