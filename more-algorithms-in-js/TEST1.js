@@ -53,7 +53,7 @@ function diffArray1(arr) {
 // diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 //console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]));
 ////////////////////////////////////////////////////////
-// Largest number finder
+// Largest and smallest number finder
 function largestNumFinder(arr) {
   let largest = 0;
   let smallest = 0;
@@ -67,8 +67,21 @@ for (let i = 0; i < arr.length; i++) {
 }
   return {largest, smallest};
 }
-console.log(largestNumFinder([1, 5, 6, 100, 7, 2021, -2]));
+//console.log(largestNumFinder([1, 5, 6, 100, 7, 2021, -2]));
 ////////////////////////////////////////////////////////
+// Missing int finder
+function missingNumFinder(arr) {
+  let result = 0;
+  let increment = 0;
+  while(result===0) {
+    increment++;
+    if(arr.indexOf(increment) === -1) {
+      result = increment;
+    }
+  }
+  return {result};
+}
+console.log(missingNumFinder([1, 5, 6, 3, 2]));
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
