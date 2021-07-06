@@ -26,7 +26,6 @@ console.log(findingDuplicates("143867523"));
 for (let i = 0; i < 10; i++) {
   let random = Math.floor(Math.random(10) * 10);
 console.log(`%c${random}`, "font-size: 3rem; color: red");
-
 }
 
 
