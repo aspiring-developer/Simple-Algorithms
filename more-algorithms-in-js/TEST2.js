@@ -64,8 +64,8 @@ function truncateString(str, num) {
 function splitArray(arr, size) {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
-    result.push(arr.slice(0, size));
-    arr = arr.slice(size);
+    result.push(arr.splice(0, size));
+    //arr = arr.slice(size); // If using slice, need this. If using splice, no need!
   }
   return result;
 }
