@@ -40,14 +40,24 @@ function repeatString(str, num) {
   if (num <= 0) return "Num is 0 or less!";
   for (let i = 0; i < num; i++) {
     result += str + " ";
-
   }
   return result;
 }
-console.log(repeatString("Repeat", 3));
+//console.log(repeatString("Repeat", 3));
 
 ////////////////////////////////////////////////////
-
+// TRUNCATE A STRING
+function truncateString(str, num) {
+  let result = '';
+  if (str.length <= 3) {
+    result = str;
+  }
+  if (str.length > num) {
+    result = str.slice(0, num) + "...";
+  }
+  return result;
+}
+console.log(truncateString("A-tisket, a-tasket, green and yellow basket", 8));
 
 ////////////////////////////////////////////////////
 
