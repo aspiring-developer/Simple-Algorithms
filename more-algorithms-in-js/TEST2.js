@@ -57,11 +57,19 @@ function truncateString(str, num) {
   }
   return result;
 }
-console.log(truncateString("A-tisket, a-tasket, green and yellow basket", 8));
+//console.log(truncateString("A-tisket, a-tasket, green and yellow basket", 8));
 
 ////////////////////////////////////////////////////
-
-
+// SPLIT ARRAY INTO TWO
+function splitArray(arr, size) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr.slice(0, size));
+    arr = arr.slice(size);
+  }
+  return result;
+}
+console.log(splitArray(['a', 'b', 'c', 'd'], 2))
 ////////////////////////////////////////////////////
 
 
