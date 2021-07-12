@@ -47,9 +47,21 @@ function titleCase(str) {
   }
   return resultConverted;
 }
-console.log(titleCase("make iT TiTlEcaSe"));
+//console.log(titleCase("make iT TiTlEcaSe"));
 ///////////////////////////////////////////////
-
+// FINDING MOST OCCURRING CHARACTER
+function findOccurringChar(str) {
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    if (result[str[i]] > 0) {
+      result[str[i]]++;
+    } else {
+      result[str[i]] = 1;
+    }
+  }
+  return result;
+}
+console.log(findOccurringChar("javascript"));
 
 ///////////////////////////////////////////////
 
