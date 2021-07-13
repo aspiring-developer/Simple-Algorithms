@@ -84,14 +84,25 @@ function fearNotLetter(str) {
 }
 
 //fearNotLetter("abce");
-console.log(fearNotLetter("abce")); // d
-console.log(fearNotLetter("abcdefghjklmno")); // i
-console.log(fearNotLetter("stvwx")); // u
-console.log(fearNotLetter("bcdf")); // e
-console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
+//console.log(fearNotLetter("abce")); // d
+//console.log(fearNotLetter("abcdefghjklmno")); // i
+//console.log(fearNotLetter("stvwx")); // u
+//console.log(fearNotLetter("bcdf")); // e
+//console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
 
 ///////////////////////////////////////////////
-
+// FALSY VALUE BOUNCER
+function bouncer(arr) {
+  let falsy = ["", null, NaN, undefined, false, 0];
+  let truthy = [];
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i]) {
+      truthy.push(arr[i]);
+    }
+  }
+  return truthy;
+}
+console.log(bouncer(["", null, NaN, undefined, false, 0, "Hello", 123]));
 
 ///////////////////////////////////////////////
 
