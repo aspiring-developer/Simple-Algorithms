@@ -61,10 +61,34 @@ function findOccurringChar(str) {
   }
   return result;
 }
-console.log(findOccurringChar("javascript"));
+//console.log(findOccurringChar("javascript"));
 
 ///////////////////////////////////////////////
+/* Missing letters
+Find the missing letter in the passed letter range and return it.
+If all letters are present in the range, return undefined. */
+// FIND MISSING CHARACTER
+function fearNotLetter(str) {
+  let result = '';
+  let allChars = "abcdefghijklmnopqrstuvwxyz";
+  let chunkOut = allChars.slice(allChars.indexOf(str, str.length));
+  //console.log(chunkOut);
+  for (let i = 0; i < chunkOut.length; i++) {
 
+    if (str.indexOf(chunkOut[i]) === -1) {
+      result = chunkOut[i];
+    }
+  }
+  //console.log(result)
+  return result;
+}
+
+//fearNotLetter("abce");
+console.log(fearNotLetter("abce")); // d
+console.log(fearNotLetter("abcdefghjklmno")); // i
+console.log(fearNotLetter("stvwx")); // u
+console.log(fearNotLetter("bcdf")); // e
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
 
 ///////////////////////////////////////////////
 
