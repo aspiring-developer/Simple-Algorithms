@@ -71,8 +71,8 @@ If all letters are present in the range, return undefined. */
 function fearNotLetter(str) {
   let result = '';
   let allChars = "abcdefghijklmnopqrstuvwxyz";
-  let chunkOut = allChars.slice(allChars.indexOf(str, str.length));
-  //console.log(chunkOut);
+  let chunkOut = allChars.slice(allChars.indexOf(str, ));
+  console.log(chunkOut);
   for (let i = 0; i < chunkOut.length; i++) {
 
     if (str.indexOf(chunkOut[i]) === -1) {
@@ -83,12 +83,12 @@ function fearNotLetter(str) {
   return result;
 }
 
-//fearNotLetter("abce");
-//console.log(fearNotLetter("abce")); // d
-//console.log(fearNotLetter("abcdefghjklmno")); // i
-//console.log(fearNotLetter("stvwx")); // u
-//console.log(fearNotLetter("bcdf")); // e
-//console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
+fearNotLetter("abce");
+console.log(fearNotLetter("abce")); // d
+console.log(fearNotLetter("abcdefghjklmno")); // i
+console.log(fearNotLetter("stvwx")); // u
+console.log(fearNotLetter("bcdf")); // e
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
 
 ///////////////////////////////////////////////
 // FALSY VALUE BOUNCER
@@ -102,7 +102,7 @@ function bouncer(arr) {
   }
   return truthy;
 }
-console.log(bouncer(["", null, NaN, undefined, false, 0, "Hello", 123]));
+//console.log(bouncer(["", null, NaN, undefined, false, 0, "Hello", 123]));
 
 ///////////////////////////////////////////////
 
