@@ -71,32 +71,25 @@ If all letters are present in the range, return undefined. */
 function fearNotLetter(str) {
   let result = '';
   let allChars = "abcdefghijklmnopqrstuvwxyz";
-  //let chunkOut = allChars.slice(allChars.indexOf(str[0]), str.length + 1);
-  let chunkOut = allChars.substr(allChars.indexOf(str[0]), str.length + 1);
-  //console.log(chunkOut + " <--chunkOut");
-  //console.log(allChars.indexOf(str[0]) + " <--allChars.indexOf(str[0])");
+  let chunkOut = allChars.substr(allChars.indexOf(str[0]), str.length);
   for (let i = 0; i < chunkOut.length; i++) {
     if (str.indexOf(chunkOut[i]) === -1) {
       result = chunkOut[i];
       return result;
     }
-
   }
   return undefined;
-
 }
 
-//fearNotLetter("abce");
-console.log(fearNotLetter("abce") + " <--abce"); // d
-console.log(fearNotLetter("abcdefghjklmno") + " <--abcdefghjklmno"); // i
-console.log(fearNotLetter("stvwx") + " <--stvwx"); // u
-console.log(fearNotLetter("cdf") + " <--cdf"); // e
-console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
+//console.log(fearNotLetter("abce") + " <--abce"); // d
+//console.log(fearNotLetter("abcdefghjklmno") + " <--abcdefghjklmno"); // i
+//console.log(fearNotLetter("stvwx") + " <--stvwx"); // u
+//console.log(fearNotLetter("cdf") + " <--cdf"); // e
+//console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
 
 ///////////////////////////////////////////////
 // FALSY VALUE BOUNCER
 function bouncer(arr) {
-  let falsy = ["", null, NaN, undefined, false, 0];
   let truthy = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i]) {
@@ -106,6 +99,62 @@ function bouncer(arr) {
   return truthy;
 }
 //console.log(bouncer(["", null, NaN, undefined, false, 0, "Hello", 123]));
+
+///////////////////////////////////////////////
+//Sum All Numbers in a RangePassed
+//We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. The lowest number will not always come first.
+//For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
+
+function sumAll(arr) {
+  let sorted = arr.sort(function (a, b) { return a - b });
+  let startingNum = sorted[0];
+  let endingNum = sorted[1];
+  let result = 0;
+  for (let i = startingNum; i <= endingNum; i++) {
+    result += i;
+  }
+  return result;
+}
+//console.log(sumAll([5, 1]));
+//sumAll([1, 4]);
+
+
+///////////////////////////////////////////////
+//Diff Two Arrays
+//Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+
+//Note: You can return the array with its elements in any order.
+
+function diffArray1(arr1, arr2) {
+  let newArr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1.indexOf(arr2[i]) === -1) {
+      console.log(arr2[i]);
+      newArr.push(arr2[i]);
+    }
+    if (arr2.indexOf(arr1[i]) === -1) {
+      console.log(arr1[i]);
+      newArr.push(arr1[i]);
+    }
+  }
+  //console.log(newArr);
+  return newArr;
+}
+//console.log(diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+console.log(diffArray1([1, "calf", 3, "piglet"], [7, "filly"]));
+//diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+///////////////////////////////////////////////
+
+
+///////////////////////////////////////////////
+
+
+///////////////////////////////////////////////
+
+
+///////////////////////////////////////////////
+
 
 ///////////////////////////////////////////////
 
