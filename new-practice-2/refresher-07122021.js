@@ -71,24 +71,23 @@ If all letters are present in the range, return undefined. */
 function fearNotLetter(str) {
   let result = '';
   let allChars = "abcdefghijklmnopqrstuvwxyz";
-  let chunkOut = allChars.slice(allChars.indexOf(str, ));
-  console.log(chunkOut);
+  let chunkOut = allChars.slice(allChars.indexOf(str[0]), str.length + 1);
+  //console.log(str.indexOf(allChars));
   for (let i = 0; i < chunkOut.length; i++) {
-
     if (str.indexOf(chunkOut[i]) === -1) {
       result = chunkOut[i];
     }
   }
-  //console.log(result)
+  // console.log(result);
   return result;
 }
 
-fearNotLetter("abce");
-console.log(fearNotLetter("abce")); // d
-console.log(fearNotLetter("abcdefghjklmno")); // i
-console.log(fearNotLetter("stvwx")); // u
-console.log(fearNotLetter("bcdf")); // e
-console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); // undefined
+//fearNotLetter("abce");
+console.log(fearNotLetter("abce") + " <--abce"); // d
+console.log(fearNotLetter("abcdefghjklmno") + " <--abcdefghjklmno"); // i
+console.log(fearNotLetter("stvwx") + " <--stvwx"); // u
+console.log(fearNotLetter("bcdf") + " <--bcdf"); // e
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz") + " <--abcdefghijklmnopqrstuvwxyz"); // undefined
 
 ///////////////////////////////////////////////
 // FALSY VALUE BOUNCER
@@ -96,7 +95,7 @@ function bouncer(arr) {
   let falsy = ["", null, NaN, undefined, false, 0];
   let truthy = [];
   for (let i = 0; i < arr.length; i++) {
-    if(arr[i]) {
+    if (arr[i]) {
       truthy.push(arr[i]);
     }
   }
