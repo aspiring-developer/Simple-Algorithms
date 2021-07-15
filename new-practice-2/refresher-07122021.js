@@ -122,30 +122,52 @@ function sumAll(arr) {
 ///////////////////////////////////////////////
 //Diff Two Arrays
 //Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
-
 //Note: You can return the array with its elements in any order.
 
 function diffArray1(arr1, arr2) {
   let newArr = [];
+  let resultFromArr1 = [];
+  let resultFromArr2 = [];
   for (let i = 0; i < arr1.length; i++) {
+      if (arr1.indexOf(arr2[i]) === -1) {
+      //console.log(arr2[i]);
+      resultFromArr1.push(arr2[i]);
+    }
     if (arr1.indexOf(arr2[i]) === -1) {
-      console.log(arr2[i]);
-      newArr.push(arr2[i]);
+      //console.log(arr1[i]);
+      resultFromArr2.push(arr1[i]);
     }
-    if (arr2.indexOf(arr1[i]) === -1) {
-      console.log(arr1[i]);
-      newArr.push(arr1[i]);
-    }
+    newArr = resultFromArr1.concat(resultFromArr2);
   }
-  //console.log(newArr);
   return newArr;
 }
 //console.log(diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]));
 console.log(diffArray1([1, "calf", 3, "piglet"], [7, "filly"]));
 //diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-
 ///////////////////////////////////////////////
+//function diffArray1(arr1, arr2) {
+//  let newArr = [];
+//  let resultFromArr1 = [];
+//  let resultFromArr2 = [];
 
+//      if (!arr1.includes(arr2)) {
+//      //console.log(arr2[i]);
+//      newArr.push(arr2);
+//      //console.log(resultFromArr1);
+
+//    }
+//    if (!arr1.includes(arr2)) {
+//      //console.log(arr1);
+//      newArr.push(arr1);
+//      //console.log(resultFromArr2);
+//    }
+//    //newArr = resultFromArr1.concat(resultFromArr2);
+
+//  return newArr;
+//}
+////console.log(diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+//console.log(diffArray1([1, "calf", 3, "piglet"], [7, "filly"]));
+////diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 
 ///////////////////////////////////////////////
 
