@@ -126,22 +126,19 @@ function sumAll(arr) {
 
 function diffArray1(arr1, arr2) {
   let newArr = [];
-  let resultFromArr1 = [];
-  let resultFromArr2 = [];
   for (let i = 0; i < arr1.length; i++) {
-      if (arr1.indexOf(arr2[i]) === -1) {
-      //console.log(arr2[i]);
-      resultFromArr1.push(arr2[i]);
+    if (arr2.indexOf(arr1[i]) === -1) {
+      newArr.push(arr1[i]);
     }
-    if (arr1.indexOf(arr2[i]) === -1) {
-      //console.log(arr1[i]);
-      resultFromArr2.push(arr1[i]);
+  }
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr1.indexOf(arr2[j]) === -1) {
+      newArr.push(arr2[j]);
     }
-    newArr = resultFromArr1.concat(resultFromArr2);
   }
   return newArr;
 }
-//console.log(diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+console.log(diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5,8]));
 console.log(diffArray1([1, "calf", 3, "piglet"], [7, "filly"]));
 //diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 ///////////////////////////////////////////////
