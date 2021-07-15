@@ -138,7 +138,7 @@ function diffArray1(arr1, arr2) {
   }
   return newArr;
 }
-console.log(diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5,8]));
+console.log(diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]));
 console.log(diffArray1([1, "calf", 3, "piglet"], [7, "filly"]));
 //diffArray1([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 ///////////////////////////////////////////////
