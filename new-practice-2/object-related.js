@@ -23,8 +23,8 @@ function phoneticLookup(val) {
     "echo": "Easy",
     "foxtrot": "Frank"
   }
-//let value = val;
-result = lookup[val];
+  //let value = val;
+  result = lookup[val];
   // Only change code above this line
   return result;
 }
@@ -36,8 +36,8 @@ phoneticLookup("delta");
 
 function checkObj(obj, checkProp) {
   // Only change code below this line
-  if(obj.hasOwnProperty(checkProp)) {
-  return obj[checkProp];
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
 
   } else {
     return "Not Found";
@@ -83,7 +83,7 @@ var myStorage = {
     "inside": {
       "glove box": "maps",
       "passenger seat": "crumbs"
-     },
+    },
     "outside": {
       "trunk": "jack"
     }
@@ -148,24 +148,103 @@ var recordCollection = {
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
-  if(prop!=recordCollection.tracks && value!="") {
-    prop = value;
-  } else if(prop==recordCollection.tracks && !recordCollection.hasOwnProperty(tracks)) {
-    let createArr = [];
-    createArr.push(recordCollection.tracks);
-  } else if(prop==recordCollection.tracks && value!="") {
-    recordCollection.tracks.push(recordCollection.tracks)
-  } else if(value=="") {
-    delete prop;
+  if (prop !== 'tracks' && value !== "") {
+    records[id][prop] = value;
+  } else if (prop === 'tracks' && records[id].hasOwnProperty("tracks") === false) {
+    records[id][prop] = [value];
+  } else if (prop === 'tracks' && value !== "") {
+    records[id][prop].push(value)
+  } else if (value === "") {
+    delete records[id][prop];
   }
   return records;
 }
 
 //updateRecords(recordCollection, 5439, 'artist', 'ABBA');
-console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+//console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
 
 //////////////////////////////////////////
+// Add the numbers 5 through 0 (inclusive) in descending order to myArray using a while loop.
+// Setup
+var myArray = [];
+// Only change code below this line
+let i = 5;
+while (i >= 0) {
+  myArray.push(i);
+  i--;
+}
+//console.log(myArray);
 //////////////////////////////////////////
+// Use a for loop to push the values 1 through 5 onto myArray.
+// Setup
+var myArray1 = [];
+// Only change code below this line
+for (let i = 1; i <= 5; i++) {
+  myArray1.push(i)
+
+}
+//console.log(myArray1);
 //////////////////////////////////////////
+// Push the odd numbers from 1 through 9 to myArray using a for loop.
+// Setup
+var myArray = [];
+// Only change code below this line
+for (let i = 0; i <= 10; i++) {
+  if (i % 2 === 1) {
+    myArray.push(i);
+  }
+}
+//console.log(myArray);
+
 //////////////////////////////////////////
+// Push the odd numbers from 9 through 1 to myArray using a for loop.
+// Setup
+var myArray = [];
+// Only change code below this line
+for (let i = 10; i >= 0; i--) {
+  if (i % 2 === 1) {
+    myArray.push(i);
+  }
+}
+//console.log(myArray);
 //////////////////////////////////////////
+// Declare and initialize a variable total to 0. Use a for loop to add the value of each element of the myArr array to total.
+// Setup
+var myArr = [2, 3, 4, 5, 6];
+// Only change code below this line
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+//console.log(total);
+/////////////////////////////////////////////
+// Modify function multiplyAll so that it returns the product of all the numbers in the sub-arrays of arr.
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    product *= arr[i][j];
+  }
+}
+  // Only change code above this line
+  return product;
+}
+//console.log(multiplyAll([[1,2],[3,4],[5,6,7]]));
+//multiplyAll([[1,2],[3,4],[5,6,7]]);
+////////////////////////////////////////////
+// Change the while loop in the code to a do...while loop so the loop will push only the number 10 to myArray, and i will be equal to 11 when your code has finished running.
+// Setup
+var myArray2 = [];
+var k = 10;
+
+// Only change code below this line
+do {
+  myArray2.push(k);
+  k++;
+}
+while (k < 10);
+console.log(myArray2);
+///////////////////////////////////////////////
+
+/////////////////////////////////////////////
