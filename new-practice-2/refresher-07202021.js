@@ -124,7 +124,7 @@ checkEqual(2, 2);
 // Multiple Ternary operator
 // In the checkSign function, use multiple conditional operators - following the recommended format used in findGreaterOrEqual - to check if a number is positive, negative or zero. The function should return positive, negative or zero.
 function checkSign(num) {
-  return (num>0)?"positive":(num<0)?"negative":"zero";
+  return (num > 0) ? "positive" : (num < 0) ? "negative" : "zero";
 }
 //console.log(checkSign(0));
 ////////////////////////////////////////////////////
@@ -132,13 +132,35 @@ function checkSign(num) {
 /* The function should use recursion to return an array containing the integers n through 1 based on the n parameter. If the function is called with a number less than 1, the function should return an empty array. For example, calling this function with n = 5 should return the array [5, 4, 3, 2, 1]. Your function must use recursion by calling itself and must not use loops of any kind. */
 
 // Only change code below this line
-function countdown(n){
+function countdown(n) {
   let result = [];
-
-  return result;
+  if (n > 0) {
+    result = countdown(n - 1);
+    result.unshift(n);
+    return result;
+  }
+  else {
+    return [];
+  }
 }
-console.log(countdown(5))
+//console.log(countdown(5));
 // Only change code above this line
 
+////////////////////////////////////////////////////
+// Use Recursion to Create a Range of Numbers
+/* The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same. */
+
+function rangeOfNumbers(startNum, endNum) {
+  let result = [];
+  if (endNum >= startNum) {
+    result = rangeOfNumbers(startNum, endNum - 1);
+    result.push(endNum);
+    return result;
+  }
+  return [];
+};
+console.log(rangeOfNumbers(1, 5));
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 
