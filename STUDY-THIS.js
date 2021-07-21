@@ -43,7 +43,7 @@ function updateRecords(records, id, prop, value) {
 }
 
 //updateRecords(recordCollection, 5439, 'artist', 'ABBA');
-console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+//console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
 
 //////////////////////////////////////////////////////////////////////////////////
 // Use Recursion to Create a Range of Numbers
@@ -51,14 +51,16 @@ console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
 
 function rangeOfNumbers(startNum, endNum) {
   let result = [];
-  if (endNum >= startNum) {
+  //if (endNum >= startNum) {
+  if (startNum <= endNum) {
     result = rangeOfNumbers(startNum, endNum - 1);
     result.push(endNum);
     return result;
   }
   return [];
 };
-console.log(rangeOfNumbers(1, 5));
+console.log(rangeOfNumbers(2, 6));
+
 //////////////////////////////////////////////////////////////////////////////////
 // Use Recursion to Create a Countdown
 /* The function should use recursion to return an array containing the integers n through 1 based on the n parameter. If the function is called with a number less than 1, the function should return an empty array. For example, calling this function with n = 5 should return the array [5, 4, 3, 2, 1]. Your function must use recursion by calling itself and must not use loops of any kind. */
