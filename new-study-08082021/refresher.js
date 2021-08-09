@@ -53,13 +53,56 @@ function reverseString(str) {
   }
   return reversed;
 }
-console.log(reverseString("Reverse this string"))
+//console.log(reverseString("Reverse this string"));
+///////////////////////////////////////////////////////
+// Palindrome Check
+function isPalindrome(str) {
+  let reversed = '';
+  let result = false;
+  for (let i = 0; i < str.length; i++) {
+    reversed = str[i] + reversed;
+    if (str === reversed) {
+      result = true;
+    }
+  }
+  return result;
+}
+//console.log(isPalindrome("racecar"));
+///////////////////////////////////////////////////////
+// Integer Reversal
+function reverseInt(num) {
+  let result = '';
+  let convertToStr = num.toString();
+  for (let i = 0; i < convertToStr.length; i++) {
+    result = parseInt(convertToStr[i] + result);
+  }
+  return result;
+}
+//console.log(reverseInt(123));
+
+///////////////////////////////////////////////////////
+// Title Case Words
+function titleCase(str) {
+let result = '';
+let splittedWords = str.split(' ');
+for (let i = 0; i < splittedWords.length; i++) {
+  console.log(splittedWords[i][0]);
+
+}
+
+
+  return result;
+}
+console.log(titleCase('make this sentence title case.'));
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
+// ALGORITHM TITLE
+//function funcName(params) {
+
+//  return params;
+//}
+//console.log(funcName('args'));
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
