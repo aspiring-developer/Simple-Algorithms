@@ -140,26 +140,56 @@ function maxChar(str) {
 // FIZZ BUZZ CHALLENGE
 function fizzBuzz(num) {
   let result = '';
-  for (let i = 0; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     //console.log(i)
     if (i % 3 == 0 && i % 5 == 0) {
-      result = 'FizzBuzz';
+      //console.log('FizzBuzz');
     }
     else if (i % 3 == 0) {
-      result = 'Fizz';
+      //console.log('Fizz');
     }
     else if (i % 5 == 0) {
-      result = 'Buzz';
+      //console.log('Buzz');
     }
-
-    //else {
-    //  result = i
-    //}
+    else {
+      //console.log(i);
+    }
   }
   return result;
 }
-console.log(fizzBuzz(30));
+fizzBuzz(15);
+//console.log(fizzBuzz(15));
 
+///////////////////////////////////////////////////////
+// ALGORITHM TITLE
+//function funcName(params) {
+
+//  return params;
+//}
+//console.log(funcName('args'));
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// LONGEST WORD IN SENTENCE
+function longestWordFinder(str) {
+let longest = '';
+str=str.split(' ');
+for (let i = 0; i < str.length; i++) {
+  if(str[i].length>longest.length){
+    longest=str[i];
+  };
+}
+  return longest;
+}
+console.log(longestWordFinder('Find longest word in this sentence'));
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// ALGORITHM TITLE
+//function funcName(params) {
+
+//  return params;
+//}
+//console.log(funcName('args'));
+///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 // ALGORITHM TITLE
 //function funcName(params) {
