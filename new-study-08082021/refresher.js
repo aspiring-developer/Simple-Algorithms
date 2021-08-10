@@ -134,8 +134,32 @@ function maxChar(str) {
   return str;
 }
 //maxChar("javascript"); // result a:2 (a = 2)
-console.log(maxChar("javascript")); // result a:2 (a = 2)
+//console.log(maxChar("javascript")); // result a:2 (a = 2)
 ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// FIZZ BUZZ CHALLENGE
+function fizzBuzz(num) {
+  let result = '';
+  for (let i = 0; i <= num; i++) {
+    //console.log(i)
+    if (i % 3 == 0 && i % 5 == 0) {
+      result = 'FizzBuzz';
+    }
+    else if (i % 3 == 0) {
+      result = 'Fizz';
+    }
+    else if (i % 5 == 0) {
+      result = 'Buzz';
+    }
+
+    //else {
+    //  result = i
+    //}
+  }
+  return result;
+}
+console.log(fizzBuzz(30));
+
 ///////////////////////////////////////////////////////
 // ALGORITHM TITLE
 //function funcName(params) {
@@ -143,6 +167,4 @@ console.log(maxChar("javascript")); // result a:2 (a = 2)
 //  return params;
 //}
 //console.log(funcName('args'));
-///////////////////////////////////////////////////////
-
 ///////////////////////////////////////////////////////
