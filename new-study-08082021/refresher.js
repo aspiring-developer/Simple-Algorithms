@@ -108,17 +108,34 @@ function titleCase1(str1) {
 ///////////////////////////////////////////////////////
 // MAX OCCURRING CHARACTER
 function maxOccurringChar(str) {
-  let observed = '';
-  let result = {};
+  let observed = [];
   for (let i = 0; i < str.length; i++) {
-    console.log(observed[str[i]]);
-    if (observed[str[i]]) {
-      result.push(str[i]);
+    if (observed[str[i]] > 0) {
+      observed[str[i]]++;
+    }
+    else {
+      observed[str[i]] = 1;
     }
   }
-  return result;
+  return observed;
 }
-console.log(maxOccurringChar('javascript'));
+//console.log(maxOccurringChar('javascript'));
+///////////////////////////////////////////////////////
+// MAX OCCURRING CHARACTER
+function maxChar(str) {
+  str = str.split('');
+  for (let i = 0; i < str.length; i++) {
+    if (str[str[i]] > 0) {
+      str[str[i]]++;
+    } else {
+      str[str[i]] = 1;
+    }
+  }
+  return str;
+}
+//maxChar("javascript"); // result a:2 (a = 2)
+console.log(maxChar("javascript")); // result a:2 (a = 2)
+///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 // ALGORITHM TITLE
 //function funcName(params) {
@@ -127,6 +144,5 @@ console.log(maxOccurringChar('javascript'));
 //}
 //console.log(funcName('args'));
 ///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
+
 ///////////////////////////////////////////////////////
