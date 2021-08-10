@@ -83,17 +83,25 @@ function reverseInt(num) {
 ///////////////////////////////////////////////////////
 // Title Case Words
 function titleCase(str) {
-let result = '';
-let splittedWords = str.split(' ');
-for (let i = 0; i < splittedWords.length; i++) {
-  console.log(splittedWords[i][0]);
+  let result = '';
+  let upperLetter = '';
+  let lowerLetter = '';
+  let splittedWords = str.split(' ');
+  //console.log(splittedWords + " <--splittedWords");
+  for (let i = 0; i < splittedWords.length; i++) {
+    upperLetter = splittedWords[i][0].toUpperCase();
+    //console.log(splittedWords[i] + " <--i");
+    lowerLetter = splittedWords[i].slice(1).toLowerCase();
+    //console.log(upperLetter + " <--upperLetter");
+    //console.log(lowerLetter + " <--lowerLetter");
+    //console.log(result);
 
-}
-
-
+    result += upperLetter + lowerLetter + ' ';
+  }
   return result;
 }
-console.log(titleCase('make this sentence title case.'));
+//titleCase('make this sentence title case.');
+console.log(titleCase('make this sentEnce tiTle case.'));
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
