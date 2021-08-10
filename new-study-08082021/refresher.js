@@ -86,24 +86,39 @@ function titleCase(str) {
   let result = '';
   let upperLetter = '';
   let lowerLetter = '';
-  let splittedWords = str.split(' ');
-  //console.log(splittedWords + " <--splittedWords");
-  for (let i = 0; i < splittedWords.length; i++) {
-    upperLetter = splittedWords[i][0].toUpperCase();
-    //console.log(splittedWords[i] + " <--i");
-    lowerLetter = splittedWords[i].slice(1).toLowerCase();
-    //console.log(upperLetter + " <--upperLetter");
-    //console.log(lowerLetter + " <--lowerLetter");
-    //console.log(result);
-
+  str = str.split(' ');
+  for (let i = 0; i < str.length; i++) {
+    upperLetter = str[i][0].toUpperCase();
+    lowerLetter = str[i].slice(1).toLowerCase();
     result += upperLetter + lowerLetter + ' ';
   }
   return result;
 }
-//titleCase('make this sentence title case.');
-console.log(titleCase('make this sentEnce tiTle case.'));
+//console.log(titleCase('make this sentEnce tiTle case.'));
 ///////////////////////////////////////////////////////
+// Title Case Words
+function titleCase1(str1) {
+  str1 = str1.toLowerCase().split(' ');
+  for (let i = 0; i < str1.length; i++) {
+    str1[i] = str1[i].charAt(0).toUpperCase() + str1[i].slice(1)
+  }
+  return str1.join(' ');
+}
+//console.log(titleCase1('make this sentEnce tiTle case.'));
 ///////////////////////////////////////////////////////
+// MAX OCCURRING CHARACTER
+function maxOccurringChar(str) {
+  let observed = '';
+  let result = {};
+  for (let i = 0; i < str.length; i++) {
+    console.log(observed[str[i]]);
+    if (observed[str[i]]) {
+      result.push(str[i]);
+    }
+  }
+  return result;
+}
+console.log(maxOccurringChar('javascript'));
 ///////////////////////////////////////////////////////
 // ALGORITHM TITLE
 //function funcName(params) {
