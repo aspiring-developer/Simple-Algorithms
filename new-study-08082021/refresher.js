@@ -185,27 +185,25 @@ function longestWordFinder(str) {
 ///////////////////////////////////////////////////////
 // ANAGRAM
 function anagramFinder(mainWord, target) {
-  let isAnagram = '';
+  let isAnagram = true;
   mainWord = mainWord.split('').sort();
   target = target.split('').sort();
-  console.log(mainWord);
-  //console.log(target);
   for (let i = 0; i < mainWord.length; i++) {
     if (mainWord.length !== target.length) {
       return false;
     }
-    if (mainWord[i] !== target[i]) {
+    if (mainWord[i].indexOf(target[i]) === -1) {
       isAnagram = false;
-      console.log(mainWord[i]);
-      console.log(target[i]);
+      console.log(mainWord[i] + " <--mainWord[i]");
+      console.log(target[i] + " <--target[i]");
     }
-    else {
-      isAnagram = true;
-    }
+    //else {
+    //  isAnagram = false;
+    //}
   }
   return isAnagram;
 }
-console.log(anagramFinder('adddgrs', 'addegrs'));
+console.log(anagramFinder('adddgrs', 'adddgrs'));
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 // ALGORITHM TITLE
