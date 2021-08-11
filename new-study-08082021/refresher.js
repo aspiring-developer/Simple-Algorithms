@@ -171,24 +171,32 @@ fizzBuzz(15);
 ///////////////////////////////////////////////////////
 // LONGEST WORD IN SENTENCE
 function longestWordFinder(str) {
-let longest = '';
-str=str.split(' ');
-for (let i = 0; i < str.length; i++) {
-  if(str[i].length>longest.length){
-    longest=str[i];
-  };
-}
+  let longest = '';
+  str = str.split(' ');
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].length > longest.length) {
+      longest = str[i];
+    };
+  }
   return longest;
 }
-console.log(longestWordFinder('Find longest word in this sentence'));
+//console.log(longestWordFinder('Find longest word in this sentence'));
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
-// ALGORITHM TITLE
-//function funcName(params) {
-
-//  return params;
-//}
-//console.log(funcName('args'));
+// ANAGRAM
+function anagramFinder(mainWord, target) {
+  let isAnagram = false;
+  for (let i = 0; i < mainWord.length; i++) {
+    if (mainWord.indexOf(target[i]) === -1) {
+      isAnagram = true;
+    }
+    else {
+      isAnagram = false;
+    }
+  }
+  return isAnagram;
+}
+console.log(anagramFinder('argddds', 'grddaps'));
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 // ALGORITHM TITLE
